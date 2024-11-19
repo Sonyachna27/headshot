@@ -1,0 +1,81 @@
+.add{
+	overflow-x: hidden;
+	padding-top: 75px;
+	&__container{
+		background-color: $--orange;
+		background-image: url(../img/add-bg.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		color: $--dark;
+		padding: 40px;
+		position: relative;
+		display: flex;
+		gap: 110px;
+		flex-direction: column;
+		// overflow: hidden;
+		@media screen and (min-width:1600px) {
+			padding: 50px 80px;
+		}
+		@media screen and (min-width:1440px) and (max-width:1599px){
+			padding: 65px 50px 50px 70px;
+		}
+		@media screen and (max-width:767px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			min-width: 100vw;
+			padding: 40px 20px 0 20px;
+			gap: 40px;
+		}
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		@media screen and (min-width:1600px) {
+			max-width: 694px;
+		}
+		@media screen and (min-width:1440px) and (max-width:1599px){
+			max-width: 570px;
+		}
+		@media screen and (min-width:1023.5px) and (max-width:1439.8px){
+			max-width: 470px;
+		}
+		& div{
+			@include titleH2;
+			margin-bottom: 15px;
+		}
+		& p{
+			@include p2;
+			margin-bottom: 10px;
+			&:nth(last-of-type(1)){
+				margin-bottom: 40px;
+			}
+		}
+		& .btn{
+			@media screen and (max-width:767px) {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			}
+		}
+		
+	}
+	&__img{
+		max-width: 516px;
+		width: 100%;
+		margin: 0 auto;
+		@media screen and (min-width:1440px) {
+			right: 80px;
+		}
+		@media screen and (max-width:1240px) and (min-width:1439.9px){
+			max-width: 416px;
+		}
+		@media screen and (min-width:1023.5px) {
+			position: absolute;
+			bottom: 0;
+			right: 0px;
+		}
+	}
+}

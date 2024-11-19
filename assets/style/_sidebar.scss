@@ -1,0 +1,81 @@
+.sidebar{
+	position: fixed;
+	left: 0;
+	top: 0px;
+	overflow: hidden;
+	width: 60px;
+	padding: 40px 14px;
+	background: rgba(32, 32, 32, 0.50);
+	backdrop-filter: blur(10px);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 130px;
+	transition: .3s linear;
+z-index: 49;
+@media screen and (min-width:1023.5px) {
+	padding-top: 180px;
+}
+@media screen and (max-width:1023px) {
+	display: none;
+}
+	.active &{
+		width: fit-content;
+	}
+	& ul{
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		& li{
+			overflow: hidden;
+			width: 32px;
+			white-space: nowrap;
+			.active &{
+				width: fit-content;
+			}
+			& a{
+				display: flex;
+				width: fit-content;
+				align-items: center;
+				gap: 20px;
+				&:hover{
+					color: $--orange;
+					& svg path:not([class]){
+						fill: $--white;
+					}
+				}
+				& svg{
+					min-width:  32px;
+					min-height: 32px;
+					& path{
+						transition: .3s linear;
+					}
+				}
+			}
+		}
+	}
+	.sidebar__in{
+		display: block;
+		min-width: 32px;
+		min-height: 32px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		outline: none;
+		padding: 0;
+		position: absolute;
+		left: 14px;
+		&:hover{
+			& svg path{
+				fill: $--white;
+			}
+		}
+		& svg{
+			width: 100%;
+			height: 100%;
+			& path{
+				transition: .3s linear;
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.faq{
+	margin-bottom: 100px;
+
+	&__title{
+		& h2{
+			@include titleH2;
+		}
+	}
+	&__accord{
+		gap: 10px;
+	}
+		&__item{
+			padding: 40px 60px;
+			border-left: 6px solid var(--Silver, #9C9D9F);
+			background: $--silver-3;
+			&.active{
+				border-left-color: $--orange;
+			}
+			&:hover{
+				.faq__item__top p{
+					color: $--orange;
+				}
+			}
+			&__top{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+				transition: .3s linear;
+				.active{
+					color: $--white;
+				}
+				& p{
+					@include titleH4;
+				}
+				& svg{
+					transition: .3s linear;
+					width: 14.21px;
+					height: 32px;
+					& path{
+						transition: .3s linear;
+						.active &{
+							fill: $--orange;
+						}
+					}
+					.active &{
+						transform: rotate(180deg);
+						
+					}
+				}
+
+			}
+			&__bottom{
+				@include p2;
+				color: $--silver;
+			}
+		}
+	}

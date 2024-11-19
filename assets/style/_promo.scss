@@ -1,0 +1,85 @@
+.promo{
+	margin-top: 160px;
+	&__container{
+		display: flex;
+		
+		background: $--dark-1;
+	@media  screen and (max-width:1023px) {
+		flex-direction: column-reverse;
+	}	
+}
+	&__content{
+		padding: 40px 30px 40px 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		@media screen and (min-width:1024px) {
+			width: 55%;
+			padding: 80px 60px 80px 80px;
+			border-left: 10px solid $--orange;
+		}
+		@media screen and (max-width:1023.9px) {
+			border-bottom: 10px solid $--orange;
+		}
+		& span{
+			@include titleH2;
+			margin-bottom: 20px;
+			& span{
+				color: $--orange;
+				font: inherit;
+			}
+		}
+		& p{
+			@include p2;
+			margin-bottom: 10px;
+		}
+		& .btn{
+			margin-top: auto;
+		}
+	}
+&__img{
+	position: relative;
+	height: auto;
+	flex-grow: 1;
+	border: 1px dashed var(--White, #FFF);
+	width: 100%;
+	@media screen and (min-width:1024px) {
+		width: 44%;
+	}
+&:after,
+&:before{
+	content: '';
+	position: absolute;
+	top: -1px;
+	bottom: 1px;
+	height: calc(100% + 3px);
+	width: 6.23%;
+	z-index: 1;
+}
+&:before{
+	background: url(../img/left.svg) center center / cover no-repeat;
+	
+	left: -1px;
+	@media screen and (max-width:1023px) {
+		background: url(../img/left.svg) center left / cover no-repeat;
+	
+	}
+	
+}
+&::after{
+	background: url(../img/rigth.svg) center center / cover no-repeat;
+
+	right: -1px;
+	@media screen and (max-width:1023px) {
+		background: url(../img/rigth.svg) center right / cover no-repeat;
+		
+	}
+}
+& img{
+	width: 100%;
+	height: 100%;
+
+}
+}
+}

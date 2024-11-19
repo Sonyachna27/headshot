@@ -1,0 +1,74 @@
+.hero{
+	background-color: $--orange;
+	background-image: url(../img/hero-bg.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	gap: 50px;
+	&__container{
+	display: flex;
+	color: $--dark;
+	padding-top: 50px;
+	align-items: flex-end;
+	align-items: flex-end;
+	justify-content: center;
+	@media screen and (min-width:767.5px) {
+		padding-top: 130px;
+	}
+	@media screen and (max-width:1023px) {
+		flex-direction: column;
+	}
+	
+}
+&__content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: auto 0;
+	margin-left: 10px;
+	padding-bottom: 40px;
+	max-width: 100%;
+	flex-grow: 1;
+	@media screen and (min-width:1460px) {
+		padding-top: 198px;
+		padding-bottom: 190px;
+		margin-left: 23px;
+	}
+	@media screen and (min-width:1024px) {
+		width: 50%;
+		padding-bottom: 165px;
+	}
+	& h1{
+		@include titleh1;
+		margin-bottom: 15px;
+	}
+	& p{
+		@include p3;
+		margin-bottom: 20px;
+	}
+	& .btn{
+		@media screen and (max-width:767px) {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+.hero__img{
+	// max-width: 660px;
+	width: 100%;
+	flex-grow: 1;
+	@media screen and (min-width:1460px) {
+		max-width: 740px;
+	}
+	@media screen and (min-width:1023.5px) {
+		width: 50%;
+	}
+	& img{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+
+	}
+}
+}

@@ -1,0 +1,120 @@
+.different{
+	
+	&__container{
+		background-color: $--dark-1;
+		position: relative;
+		z-index: 1;
+		padding: 30px 40px;
+		display: flex;
+		gap: 70px;
+		justify-content: space-between;
+		@media screen and (min-width:1440px) {
+			padding: 60px 80px;
+		}
+		@media screen and (min-width:1023.5px) and (max-width:1439.9px) {
+			padding: 60px 80px 60px 60px;
+		}
+		@media screen and (max-width:1023px) {
+			flex-direction: column-reverse;
+		}
+		@media screen and (max-width:767px) {
+			margin-left: -20px;
+			margin-right: -20px;
+			min-width: calc(100% - 20px);
+			padding: 40px 20px;
+		}
+	}
+	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		flex-grow: 1;
+		@media screen and (min-width:1440px) {
+			width: 39.5%;
+		}
+		
+		@media screen and (min-width:1023.5px) and (max-width:1439.9px) {
+			width: 25%;
+		}
+		
+		& h2{
+			@include titleH2;
+			margin-bottom: 40px;
+			@media screen and (min-width:1460px) {
+				margin-bottom: 20px;
+			}
+		}
+		& p{
+			@include p3;
+			margin-bottom: 20px;
+			&:nth-last-of-type(1){
+				margin-bottom: 40px;
+			}
+		}
+		& .btn{
+			@media screen and (max-width:767px) {
+			max-width: 100%;
+			width: 100%;
+			}
+		}
+	}
+	&__frame{
+		width: 100%;
+		padding: 45px;
+		position: relative;
+		border: 1px dashed $--silver-3;
+		aspect-ratio: 1;
+		
+		max-height: 490px;
+		@media screen  and (min-width:1023.5px){
+			width: 19%;
+			min-width: 490px;
+		}
+		@media screen  and (max-width:767px){
+		padding: 20px;
+		}
+		&:after,
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			width: 15px;
+			z-index: 1;
+			@media screen and (min-width:1200px) {
+				width: 3.8%;
+			}
+			@media screen and (min-width:1023.5px) and (max-width:1200px) {
+				width: 30px;
+			}
+		}
+		&:before{
+			background: url(../img/left-thin.svg) center left / cover no-repeat;
+			left: 0px;
+		}
+		&::after{
+			background: url(../img/rigth-thin.svg) center right / cover no-repeat;
+			right: 0px;
+		}
+		& img,
+		& video,
+		& iframe{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		& button{
+			padding: 0;
+			border: none;
+			background: transparent;
+			outline: none;
+			width: 66px;
+			height: 66px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+}
+}
