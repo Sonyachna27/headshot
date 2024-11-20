@@ -13,6 +13,9 @@
 			padding: 40px 60px;
 			border-left: 6px solid var(--Silver, #9C9D9F);
 			background: $--silver-3;
+			@media screen and (max-width:767px) {
+				padding: 20px;
+			}
 			&.active{
 				border-left-color: $--orange;
 			}
@@ -32,11 +35,15 @@
 				}
 				& p{
 					@include titleH4;
+					@media screen and (max-width:767px) {
+						font-size: 18px;
+						line-height: 140%;
+					}
 				}
 				& svg{
 					transition: .3s linear;
-					width: 14.21px;
-					height: 32px;
+					min-width: 14.21px;
+					min-height: 32px;
 					& path{
 						transition: .3s linear;
 						.active &{

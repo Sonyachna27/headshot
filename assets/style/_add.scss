@@ -1,5 +1,6 @@
 .add{
 	overflow-x: hidden;
+	overflow-y: auto;
 	padding-top: 75px;
 	&__container{
 		background-color: $--orange;
@@ -13,14 +14,13 @@
 		display: flex;
 		gap: 110px;
 		flex-direction: column;
-		// overflow: hidden;
 		@media screen and (min-width:1600px) {
 			padding: 50px 80px;
 		}
 		@media screen and (min-width:1440px) and (max-width:1599px){
 			padding: 65px 50px 50px 70px;
 		}
-		@media screen and (max-width:767px) {
+		@media screen and (max-width:1023px) {
 			margin-left: -20px;
 			margin-right: -20px;
 			min-width: 100vw;
@@ -49,7 +49,7 @@
 		& p{
 			@include p2;
 			margin-bottom: 10px;
-			&:nth(last-of-type(1)){
+			&:nth-last-of-type(1){
 				margin-bottom: 40px;
 			}
 		}
@@ -69,10 +69,10 @@
 		@media screen and (min-width:1440px) {
 			right: 80px;
 		}
-		@media screen and (max-width:1240px) and (min-width:1439.9px){
+		@media screen and (min-width:1024px) and  (max-width:1439.9px){
 			max-width: 416px;
 		}
-		@media screen and (min-width:1023.5px) {
+		@media screen and (min-width:1023.9px) {
 			position: absolute;
 			bottom: 0;
 			right: 0px;

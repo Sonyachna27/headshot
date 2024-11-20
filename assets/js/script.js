@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	accordionFunction();
 	playVideo();
 	initPlotSlider();
+	adjustPadding();
 });
 const HTMLELEMENT = document.querySelector('html');
 const openHeader = () =>{
@@ -122,4 +123,21 @@ const initPlotSlider = () =>{
 		}
 	});
 }
+
+const adjustPadding = () => {
+	const elements = document.querySelectorAll('.add'); 
+	elements.forEach((parent) => {
+			const absoluteElement = parent.querySelector('.add__img'); 
+			const absoluteElementContainer = parent.querySelector('.add__container'); 
+
+			if (absoluteElement && absoluteElementContainer) {
+					const height = absoluteElement.offsetHeight - absoluteElementContainer.offsetHeight;
+					if(height<= 0) return
+					parent.style.paddingTop = `${height}px`;
+					console.log(`Updated padding for: `, parent, `to: ${height}px`);
+			}
+	});
+};
+
+window.addEventListener('resize', adjustPadding);
 

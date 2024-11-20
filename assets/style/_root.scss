@@ -127,6 +127,7 @@ max-width: 1380px;
 	margin-bottom: 50px;
 	@media screen and (max-width:1023px) {
 		flex-direction: column;
+		align-items: flex-start;
 	}
 	& h2{
 		@include titleH2;
@@ -156,6 +157,9 @@ max-width: 1380px;
 }
 .mb-m{
 	margin-bottom: 140px;
+	@media screen and (max-width:767px) {
+		margin-bottom: 80px;
+	}
 
 }
 [data-aos] {
