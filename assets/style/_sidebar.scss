@@ -13,10 +13,10 @@
 	padding-top: 130px;
 	transition: .3s linear;
 z-index: 49;
-@media screen and (min-width:1023.5px) {
-	padding-top: 180px;
-}
-@media screen and (max-width:1023px) {
+// @media screen and (min-width:1023.5px) {
+// 	padding-top: 180px;
+// }
+@media screen and (max-width:1239.9px) {
 	display: none;
 }
 	.active &{

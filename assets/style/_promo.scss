@@ -58,21 +58,21 @@
 	z-index: 1;
 }
 &:before{
-	background: url(../img/left.svg) center center / cover no-repeat;
+	background: url(../images/left.svg) center center / cover no-repeat;
 	
 	left: -1px;
 	@media screen and (max-width:1023px) {
-		background: url(../img/left.svg) center left / cover no-repeat;
+		background: url(../images/left.svg) center left / cover no-repeat;
 	
 	}
 	
 }
 &::after{
-	background: url(../img/rigth.svg) center center / cover no-repeat;
+	background: url(../images/rigth.svg) center center / cover no-repeat;
 
 	right: -1px;
 	@media screen and (max-width:1023px) {
-		background: url(../img/rigth.svg) center right / cover no-repeat;
+		background: url(../images/rigth.svg) center right / cover no-repeat;
 		
 	}
 }

@@ -65,7 +65,6 @@
 		position: relative;
 		border: 1px dashed $--silver-3;
 		aspect-ratio: 1;
-		
 		max-height: 490px;
 		@media screen  and (min-width:1023.5px){
 			width: 19%;
@@ -90,11 +89,11 @@
 			}
 		}
 		&:before{
-			background: url(../img/left-thin.svg) center left / cover no-repeat;
+			background: url(../images/left-thin.svg) center left / cover no-repeat;
 			left: 0px;
 		}
 		&::after{
-			background: url(../img/rigth-thin.svg) center right / cover no-repeat;
+			background: url(../images/rigth-thin.svg) center right / cover no-repeat;
 			right: 0px;
 		}
 		& img,
@@ -115,6 +114,11 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			opacity: 1;
+			&.play{
+				opacity: 0;
+				cursor: initial;
+			}
 		}
 }
 }

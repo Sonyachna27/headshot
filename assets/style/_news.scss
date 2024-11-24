@@ -1,0 +1,12 @@
+.news{
+
+	&__container{
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		padding: 50px 0;
+		@media screen and (max-width:767px ) {
+			gap: 40px;
+		}
+	}
+}

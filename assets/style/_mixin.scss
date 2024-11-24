@@ -23,6 +23,15 @@
 		font-size: 26px;
 	}
 }
+@mixin titleH3{
+		font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; 
+	@media screen and (max-width:767px) {
+		font-size: 20px;
+	}
+}
 @mixin titleH4{
 	font-size: 24px;
 	font-style: normal;

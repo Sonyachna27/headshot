@@ -1,0 +1,175 @@
+form{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	& input,
+	& textarea{
+		border: none;
+		outline: none;
+		background: none;
+	}
+	& textarea{
+		resize: none;
+		min-height: 150px;
+		height: 100%;
+	}
+	& input:not([type="submit"], [type="checkbox"]),
+	& textarea{
+		padding: 25px;
+		background-color: $--silver-3;
+		border-bottom: 2px solid $--silver;
+		color: $--silver;
+		&::placeholder{
+			@include p2;
+			color: $--silver;
+		}
+	}
+	
+	.rating-wrap{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 25px;
+		background-color: $--silver-3;
+		border-bottom: 2px solid $--silver;
+		@include p2;
+		transition: .3s ease-in-out;
+		outline: none;
+		width: 100%;
+	}
+	.rating {
+			border: none;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 5px;
+	}
+	.rating > label {
+			cursor: pointer;
+			background: url(../images/star-silver.svg) center / contain no-repeat;
+	}
+	.rating > label:before {
+			width: 21px;
+			height: 21px;
+			display: block;
+			content: "";
+	}
+	& .rating > input {
+			display: none;
+	}
+	.rating:not(:checked) > label:hover, 
+	.rating:not(:checked) > label:hover ~ label,
+	 .rating > input:checked + label:hover,
+		.rating > input:checked ~ label, 
+		.rating > input:checked ~ label:hover, 
+		.rating > input:checked ~ label:hover ~ label,
+		 .rating > label:hover ~ input:checked ~ label {
+			width: 21px;
+			height: 21px;
+			background: url(../images/star-gold.svg) center / contain no-repeat;
+	}
+	& .submit__wrap{
+		position: relative;
+		background: #02410f;
+		z-index: 1;
+		cursor: pointer;
+		& .btn{
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			background: transparent;
+			cursor: pointer;
+		}
+		&:hover{
+			&:after{
+				opacity: 0;
+			}
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background:$--gradient;
+			z-index: -1;
+			transition: .3s linear;
+		}
+	}
+	& .form__check{
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: 10px;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		
+& input[type="checkbox"]{
+	appearance: none;
+	width: 14px;
+	height: 14px;
+	padding: 3px;
+	border: none;
+	background-color: $--silver-3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&:after{
+		content: '';
+		width: 7px;
+		height: 7px;
+		background-color: $--orange;
+		display: block;
+		opacity: 0;
+		transition: .3s linear;
+	}
+	&:checked{
+		&:after{
+			opacity: 1;
+		}
+	}
+}
+
+
+// &__box {
+//   width: 14px;
+//   height: 14px;
+// 	padding: 3px;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+//   background-color: $--silver-3;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transition: background-color 0.3s, border-color 0.3s;
+// 	cursor: pointer;
+// }
+
+
+// &__box::before {
+//   content: "";
+//   width: 4px;
+//   height: 4px;
+//   background: $--orange; 
+//   opacity: 0;
+//   transition: opacity 0.3s;
+// }
+
+
+
+
+
+	}
+}
+
+// .form__check input:checked + .form__check__box:before {
+//   opacity: 1;
+// }
+
+// .form__check input:checked + .form__check__box::before {
+//   opacity: 1; 
+// }

@@ -1,0 +1,124 @@
+.service{
+	&__image{
+		max-width: 100%;
+		max-height: 500px;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		@media  screen and (max-width:767px) {
+			aspect-ratio: 280 / 170;
+		}
+
+	}
+	&__content{
+		padding: 60px 40px;
+		background-color: $--dark-1;
+		color: $--white;
+			@media screen and (max-width:767px) {
+				padding: 30px 20px;
+			}
+		& img{
+			margin-bottom: 50px;
+			max-height: 400px;
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@media screen and (max-width:767px) {
+				margin-bottom: 30px;
+				aspect-ratio: 280 / 170;
+			}
+		}
+		& h2{
+			@include titleH2;
+			text-transform: uppercase;
+			text-align: center;
+			width: fit-content;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			&:has(+ img){
+				margin-bottom: 50px;
+				@media screen and (max-width:767px) {
+				margin-bottom: 30px;
+				}
+			}
+			
+		}
+		& h3{
+			@include titleH3;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		& h4{
+			@include titleH4;
+			margin-bottom: 30px;
+		}
+		& p{
+			@include p1;
+			color: $--silver;
+			
+			&:has(+ img),
+			&:has(+ p),
+			&:has(+ ul),
+			&:has(+ ol),
+			&:has(+ h2),
+			&:has(+ h3),
+			&:has(+ h4),
+			&:has(+ a),
+			&:has( + div){
+				margin-bottom: 50px;
+				@media screen and (max-width:767px) {
+					margin-bottom: 30px;
+				}
+			}
+			
+		}
+		& ul{
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			margin-bottom: 30px;
+			& li{
+				position: relative;
+				padding-left: 35px;
+				&::before{
+					content: '';
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					background: url(../images/list-arrow.svg) center center / cover no-repeat;
+
+				}
+			}
+		}
+		& .btn{
+			margin: 0 auto;
+			margin-bottom: 50px;
+			text-align: center;
+			@media screen and (max-width:767px) {
+				margin-bottom: 30px;
+			}
+		}
+		& div{
+			border-left: 8px solid $--orange;
+			background:$--silver-3;
+			padding: 30px;
+			@media screen and (max-width:767px) {
+				padding: 20px;
+			}
+			& p{
+				color: $--white;
+				// &:not(:nth-last-of-type(1)){
+				// 	margin-bottom: 40px;
+				// }
+				// &:nth-last-of-type(1){
+				// 	margin-bottom: 0;
+				// }
+			}
+		}
+	}
+}

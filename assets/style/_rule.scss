@@ -1,0 +1,75 @@
+.rule{
+	padding: 50px 0 100px 0;
+	&__title{
+		@include titleH2;
+		margin-bottom: 50px;
+		color: $--white;
+		text-transform: uppercase;
+ 	}
+	&__wrap{
+		display: flex;
+		gap: 30px;
+		flex-direction: column;
+		@media screen and (min-width:1440px) {
+			gap: 60px;
+		}
+	@media screen and (min-width:1024px) {
+		flex-direction: row;
+	}
+
+	}
+	&__aside{
+		border: 1px solid $--silver-3;
+		background: $--dark;
+		width: 100%;
+		padding: 30px 20px;
+		height: fit-content;
+		
+		@media screen and (min-width:1024px) {
+			width: 33.8%;
+		}
+	@media screen and (min-width:1024px) {
+		position: sticky;
+		top: 0px;
+	}
+		& ul{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			color: $--white;
+			li{
+				@include p4;
+				&.active {
+					color: $--orange;
+				}
+				&:hover > a{
+					color: $--orange;
+				}
+				& a{
+					transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+				}
+			}
+		}
+	}
+	&__content{
+		padding: 30px 20px;
+		background-color: $--dark;
+		@media screen and (min-width:1024px) {
+			width: 66%;
+			padding: 40px;
+		}
+		& h2{
+			@include titleH4;
+			margin-bottom: 30px;
+			color: $--white;
+		}
+		& ul{
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-bottom: 50px;
+			@include p3;
+			color: $--silver;
+		}
+	}
+}
