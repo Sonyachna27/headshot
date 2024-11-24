@@ -107,14 +107,17 @@
 	&__menu{
 		background-color: $--dark-2;
 		padding: 50px 60px;
-		height: calc(100vh - 90px);
+		height: calc(100vh - 88px);
 		position: fixed;
-		top: 90px;
+		top: 88px;
 		left:-100%;
 		width: 100%;
 		z-index: 50;
 		transition: .3s linear;
 		overflow-y: auto;
+		@media screen and (max-width:767px) {
+			padding: 30px 20px;
+		}
 		.open &{
 			left: 0;
 		}

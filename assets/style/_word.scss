@@ -84,6 +84,9 @@
 			& h3{
 				@include titleH5;
 				margin-bottom: 5px;
+				.news &{
+					@include titleH2;
+				}
 			}
 			& h2,
 			& h3{

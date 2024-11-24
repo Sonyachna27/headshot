@@ -57,7 +57,6 @@ const fixedsidebarBtn = () =>{
 	const sidebarBtn = document.querySelector('.sidebar__in');
 	const newHeight = window.innerHeight;
 		sidebarBtn.style.top = `calc(${newHeight}px - 72px`;
-	
 }
 window.addEventListener('resize', () => {
 	fixedsidebarBtn();
@@ -177,7 +176,7 @@ const adjustPadding = () => {
 					const height = absoluteElement.offsetHeight - absoluteElementContainer.offsetHeight;
 					if(height<= 0) return
 					parent.style.paddingTop = `${height}px`;
-					console.log(`Updated padding for: `, parent, `to: ${height}px`);
+					
 			}
 	});
 };
