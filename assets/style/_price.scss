@@ -4,34 +4,53 @@
 	}
 	&__list{
 		padding: 0;
+		max-width: 100%;
+width: auto;
+
 	& ol,
 	ul{
 		padding: 0;
+		& li{
+			max-width: 100%;
+width: auto;
+
+		}
 	}
 		& li:has(ol){
 		display: flex;
 		flex-direction: column;
+
 			& div:not([class]){
 				display: grid;
-				grid-template-columns: 70% 30%;
+				grid-template-columns: minmax(250px,70%) minmax(150px, 30%);
+				width: 100%;
+					min-width: fit-content;
+				@media screen and (max-width:767px) {
+					
+					
+				}
 				& span{
 					padding: 30px 20px;
 					background-color: $--orange;
 					color: $--dark;
 					text-transform: uppercase;
-				
 				}
 			}
 		}
 		& li > ol li{
-			
+			max-width: 100%;
+			width: auto;
 			border: 1px solid $--silver-3;
 			background-color: #141414;
 			display: grid;
-			grid-template-columns: 70% 30%;
+			grid-template-columns: minmax(250px,70%) minmax(150px, 30%);
+			
+			width: 100%;
+			min-width: fit-content;
 			@include p2;
 			@media screen and (max-width:767px) {
-				width: 100%;
+				
+			
 			}
 			color: $--white;
 			&:not(:nth-last-of-type(1)){
@@ -57,9 +76,12 @@
 		border-left: 1px solid $--silver-3;
 	
 		&:hover{
-			& span,
-			& button{
+			& span{
 				transform: translateX(-100%);
+			}
+			
+			& button{
+				transform: translateX(0);
 			}
 		}
 	
@@ -67,14 +89,20 @@
 		& span{
 			display: block;
 			 transition: all .3s ease;
-			min-width: 100%;
+			// min-width: 100%;
 			border-radius: inherit;
 			width: 100%;
 			
 		}
 		& button{
 			border-radius: inherit;
-			min-width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			transform: translateX(100%);
+			// min-width: 100%;
 			display: flex;
 			align-items: center;
 			text-align: center;

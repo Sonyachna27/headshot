@@ -3669,10 +3669,17 @@ form .form__check input[type=checkbox]:checked:after {
 }
 .price__list {
   padding: 0;
+  max-width: 100%;
+  width: auto;
 }
 .price__list ol,
 .price__list ul {
   padding: 0;
+}
+.price__list ol li,
+.price__list ul li {
+  max-width: 100%;
+  width: auto;
 }
 .price__list li:has(ol) {
   display: flex;
@@ -3680,7 +3687,10 @@ form .form__check input[type=checkbox]:checked:after {
 }
 .price__list li:has(ol) div:not([class]) {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: minmax(250px, 70%) minmax(150px, 30%);
+  width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 .price__list li:has(ol) div:not([class]) span {
   padding: 30px 20px;
@@ -3689,21 +3699,21 @@ form .form__check input[type=checkbox]:checked:after {
   text-transform: uppercase;
 }
 .price__list li > ol li {
+  max-width: 100%;
+  width: auto;
   border: 1px solid #313131;
   background-color: #141414;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: minmax(250px, 70%) minmax(150px, 30%);
+  width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%; /* 25.6px */
   letter-spacing: 0.16px;
   color: #FFF;
-}
-@media screen and (max-width: 767px) {
-  .price__list li > ol li {
-    width: 100%;
-  }
 }
 .price__list li > ol li:not(:nth-last-of-type(1)) {
   border-bottom: none;
@@ -3723,19 +3733,26 @@ form .form__check input[type=checkbox]:checked:after {
   transition: all 0.3s ease;
   border-left: 1px solid #313131;
 }
-.price .price__container-btn:hover span, .price .price__container-btn:hover button {
+.price .price__container-btn:hover span {
   transform: translateX(-100%);
+}
+.price .price__container-btn:hover button {
+  transform: translateX(0);
 }
 .price .price__container-btn span {
   display: block;
   transition: all 0.3s ease;
-  min-width: 100%;
   border-radius: inherit;
   width: 100%;
 }
 .price .price__container-btn button {
   border-radius: inherit;
-  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
   display: flex;
   align-items: center;
   text-align: center;
