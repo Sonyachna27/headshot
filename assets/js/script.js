@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	adjustPadding();
 	initReviewsSlider();
 	smooth();
+	wrapTablesInDiv();
 });
 const HTMLELEMENT = document.querySelector('html');
 const openHeader = () =>{
@@ -247,4 +248,18 @@ const reviewsFormChecked = () =>{
       }
     });
   }
+}
+const wrapTablesInDiv = () => {
+
+	const documentTable = document.querySelectorAll('table, .price__list');
+	
+	if(documentTable){
+		documentTable.forEach(table => {
+			const wrapper = document.createElement('div');
+			wrapper.classList.add('scroll');
+			table.parentNode.insertBefore(wrapper, table);
+			wrapper.appendChild(table);
+		});
+	}
+  
 }

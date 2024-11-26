@@ -3,6 +3,33 @@
 	@media screen and (min-width:768px) {
 		padding: 50px 0;
 	}
+	&.article-padding{
+		background-color: $--dark-1;
+		padding: 70px 20px;
+		@media screen and (min-width:1240px) {
+			padding: 140px 80px;
+		}
+		& ul{
+			color: $--white;
+			font-weight: 700;
+		}
+		& a{
+			transition: .3s linear;
+			&:hover{
+				color: $--orange;
+			}
+		}
+		& .article__date{
+			display: flex;
+			padding: 30px 0;
+			border-top: 1px solid $--silver2;
+			align-items: center;
+			justify-content: space-between;
+			color: $--silver2;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+	}
 	&__info{
 		display: flex;
 		align-items: center;
@@ -88,6 +115,11 @@
 	& h3{
 		@include titleH4;
 		margin-bottom: 20px;
+		color: $--white;
+	}
+	& h4{
+		@include titleH4;
+		margin-bottom: 30px;
 		color: $--white;
 	}
 	& p{

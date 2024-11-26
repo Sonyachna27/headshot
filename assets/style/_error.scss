@@ -1,0 +1,30 @@
+.error{
+	padding-top: 50px;
+	
+	&__container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		& img{
+			max-width:100%;
+			max-height: 850px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			margin-bottom: 50px;
+		}
+		& h1{
+			@include titleh1;
+			margin-bottom: 20px;
+			color: $--white;
+			text-transform: uppercase;
+		}
+		& p{
+			@include p1;
+			color: $--silver;
+			margin-bottom: 50px;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+.contact{
+	&__container{
+		display: flex;
+		flex-direction: column;
+		@media screen and (min-width:1024px) {
+			flex-direction: row;
+		}
+	}
+	&__info{
+		padding: 30px 20px;
+		@media screen and (min-width:1024px) and (max-width:1439.9px) {
+		padding: 60px 30px;	
+		}
+		@media screen and (min-width:1024px) {
+			width: 45%;
+		}
+	@media screen and (min-width:1440px) {
+		padding: 60px;
+	}
+		background-image: url(../images/contact-bg.svg);
+		background-position: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+		&__item{
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			&:not(:nth-last-of-type(1)){
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					bottom: -50px;
+					width: 100%;
+					height: 1px;
+					margin-top: 10px;
+					background-color: #646566;
+				}
+			}
+			& div:not([class]),
+			& h2{
+				@include titleH2;
+				color: $--dark;
+			}
+		}
+		&__socials,
+		&__contacts{
+			display: flex;
+			flex-direction: column;
+		
+		}
+		&__contacts{
+			gap: 14px;
+		}
+		&__contact{
+			
+				display: flex;
+				width: fit-content;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-transform: uppercase;
+				color: $--silver;
+				@media screen and (max-width:767px) {
+					font-size: 14px;
+				}
+				& span{
+					display: flex;
+						align-items: center;
+						justify-content: center;
+					&:nth-of-type(1){
+						
+						max-width: 44px;
+						height: auto;
+						min-width: 44px;
+						min-height: 42px;
+						padding: 8px;
+						background-color: $--silver;
+					}
+					&:nth-of-type(2){
+						padding: 8px;
+						background-color: #313131;
+					}
+				}
+			
+		}
+		&__socials{
+			gap: 20px;
+			& a{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+				color: $--dark;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 160%; /* 28.8px */
+				letter-spacing: 0.18px;
+			}
+		}
+	}
+	&__form{
+		height: auto;
+		flex-grow: 1;
+		padding: 30px 20px;
+		background-color: $--dark;
+		@media screen and (min-width:1440px) {
+			padding: 60px 100px;
+		}
+		@media screen and (min-width:1024px) and (max-width:1439.9px) {
+			padding: 60px 30px;
+		}
+		& div:not([class]){
+			@include titleH2;
+			margin-bottom: 10px;
+			color: $--white;
+			@media screen and (max-width:767px) {
+				text-align: center;
+			}
+		}
+		& p:has(+ form){
+			color: $--orange;
+			margin-bottom: 50px;
+		}
+	}
+	&__frame{
+		width: 100%;
+		min-height: 500px;
+		height: 100%;
+		max-height: 100%;
+		& iframe,
+		& img{
+			display: block;
+			max-height: 100%;
+			height: 500px;
+			width: 100%;
+			max-width:100%;
+			object-fit: cover;
+		}
+	}
+	
+}

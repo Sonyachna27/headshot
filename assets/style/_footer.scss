@@ -97,26 +97,30 @@ z-index: 1;
 	&__contact{
 		& a{
 			display: flex;
-			font-size: 18px;
-			font-style: normal;
-			font-weight: 700;
-			line-height: normal;
-			text-transform: uppercase;
-			color: $--silver;
-			align-items: center;
+				width: fit-content;
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-transform: uppercase;
+				@media screen and (max-width:767px) {
+					font-size: 14px;
+				}
 			& span{
 				flex-grow: 1;
-				height: 100%;
+				height: auto;
 				padding: 10px;
 				background-color: #313131;
-				&:nth-child(1){
+				&:nth-of-type(1){
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-width: 44px;
+					height: auto;
 					min-width: 44px;
-				min-height: 42px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background-color: $--silver;
-				
+					min-height: 42px;
+					padding: 8px;
+					background-color: $--silver;
 				}
 				
 				

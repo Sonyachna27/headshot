@@ -24,9 +24,9 @@
 	src: url(../fonts/e-Ukraine-Bold.otf);
 	font-weight: 700;
 }
-// *{
-// 	border: 1px solid red;
-// }
+*{
+	border: 1px solid red;
+}
 
 $--gradient: linear-gradient(180deg, #313131 0%, #4E4E4E 100%), #313131;
 $--orange:#FE9A02;
@@ -158,7 +158,9 @@ max-width: 1560px;
 	@media screen and (max-width:767px) {
 		margin-bottom: 80px;
 	}
-
+}
+.mb-s{
+	margin-bottom: 100px;
 }
 [data-aos] {
   body[data-aos-easing="new-easing"] &,
@@ -340,3 +342,7 @@ max-width: 1560px;
 			aspect-ratio: 1;
 		}
 	}
+	.scroll {
+		overflow: hidden;
+	 overflow-x: auto;
+	 }
