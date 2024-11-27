@@ -24,9 +24,9 @@
 	src: url(../fonts/e-Ukraine-Bold.otf);
 	font-weight: 700;
 }
-*{
-	border: 1px solid red;
-}
+// *{
+// 	border: 1px solid red;
+// }
 
 $--gradient: linear-gradient(180deg, #313131 0%, #4E4E4E 100%), #313131;
 $--orange:#FE9A02;
@@ -38,6 +38,8 @@ $--black-bg:#101010;
 $--silver2: #646566;
 $--dark-2: #1A1A1A;
 $--dark-1: #161616;
+$--green: #4DAD54;
+$--red: #C93232;
 html.open{
 	overflow: hidden;
 }
@@ -83,10 +85,15 @@ max-width: 1560px;
 	@include p4;
 	text-transform: uppercase;
 	transition: 1s linear;
-	background: #02410f;
+	background: $--green;
 	position: relative;
 	z-index: 1;
 	&:hover{
+		color: $--white;
+		border-color: $--white;
+		svg path{
+			fill: $--white;
+		}
 		&:after{
 			opacity: 0;
 		}
@@ -192,6 +199,13 @@ max-width: 1560px;
 			background: linear-gradient(180deg, rgba(16, 16, 16, 0.00) 0%, #101010 100%);
 		}
 	}
+	&.staff-top{
+		padding: 23px 0 0 0;
+		background: none;
+		text-align: left;
+		color: $--silver2;
+	
+	}
 	&-wrap{
 		display: flex;
 		flex-direction: column;
@@ -201,7 +215,9 @@ max-width: 1560px;
 		margin: 0 auto;
 		position: relative;
 		z-index: 1;
-		
+		.staff-top &{
+			margin: 0;
+		}
 		& h1{
 			@include titleh1;
 			color: $--dark;
@@ -231,8 +247,24 @@ max-width: 1560px;
 			}
 		}
 	}
-	& a:nth-of-type(1){
+	.staff-top &{
+		color: $--silver2;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 140%; /* 19.6px */
+		
+		text-transform: uppercase;
+		svg path{
+			fill: $--silver2;
+		}
+	}
+	& a{
 		text-decoration: underline;
+		transition: .3s linear;
+		&:hover{
+			color: $--orange;
+		}
 	}
 }
 .all-pagination{
@@ -346,3 +378,13 @@ max-width: 1560px;
 		overflow: hidden;
 	 overflow-x: auto;
 	 }
+	 .available{
+		padding: 5px;
+		width: fit-content;
+		background-color: $--green;
+		color: $--white;
+		margin-bottom: 5px;
+		&.sold-out{
+			background-color: $--red;
+		}
+	}

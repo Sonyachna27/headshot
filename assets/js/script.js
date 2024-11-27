@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 	initReviewsSlider();
 	smooth();
 	wrapTablesInDiv();
+	goodsSliderInit();
+	tabsShows();
 });
 const HTMLELEMENT = document.querySelector('html');
 const openHeader = () =>{
@@ -49,6 +51,7 @@ const smooth = () =>{
 }
 const openSideBar = () => {
 	const sidebarBtn = document.querySelector('.sidebar__in');
+	if(!sidebarBtn) return
 	sidebarBtn.addEventListener('click', () =>{
 		HTMLELEMENT.classList.toggle('active');
 	})
@@ -56,6 +59,7 @@ const openSideBar = () => {
 
 const fixedsidebarBtn = () =>{
 	const sidebarBtn = document.querySelector('.sidebar__in');
+	if (!sidebarBtn) return
 	const newHeight = window.innerHeight;
 		sidebarBtn.style.top = `calc(${newHeight}px - 72px`;
 }
@@ -263,3 +267,68 @@ const wrapTablesInDiv = () => {
 	}
   
 }
+
+const goodsSliderInit = () =>{
+	const goodsSliderWrap = document.querySelector('.goodsSlider');
+	const goodsSliderWrap2 = document.querySelector('.goodsSlider2');
+	if(!goodsSliderWrap) return;
+
+	var goodsSlider = new Swiper(goodsSliderWrap, {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	var goodsSlider2 = new Swiper(goodsSliderWrap2, {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".goods-button-next",
+			prevEl: ".goods-button-prev",
+		},
+		thumbs: {
+			swiper: goodsSlider,
+		},
+	});
+}
+const tabsShows = () =>{
+	const goodsPage = document.querySelectorAll('.goods__tabs');
+	if (!goodsPage) return
+	goodsPage.forEach((goods) =>{
+		const goodsTabs = goods.querySelectorAll('.goods__container-tabs-btn');
+		const goodsContentBlock = goods.querySelectorAll('.goods__container-tabs-content');
+
+		function showGoodsContent(contentName) {
+			goodsContentBlock.forEach((content) => {
+				let contentDataName = content.dataset.name;
+				if (contentDataName === contentName) {
+					content.style.display = "block";
+				} else {
+					content.style.display = "none";
+				}
+			});
+		}
+
+		function activeGoodsTabs() {
+			goodsTabs.forEach((tab, index) => {
+				let contentDataName = tab.dataset.name;
+
+				tab.addEventListener('click', () => {
+					goodsTabs.forEach((t) => t.classList.remove('active-tab'));
+					tab.classList.add('active-tab');
+					showGoodsContent(contentDataName);
+				});
+
+				if (index === 0) {
+					tab.classList.add('active-tab');
+					showGoodsContent(contentDataName);
+				}
+			});
+		}
+
+		activeGoodsTabs();
+	})
+		
+	}
+
