@@ -69,7 +69,8 @@ form{
 	}
 	& .submit__wrap{
 		position: relative;
-		background: #02410f;
+		background: linear-gradient(180deg, #45B04A 0%, #72C774 100%), #313131;
+
 		z-index: 1;
 		& .btn{
 			max-width: 100%;

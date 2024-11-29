@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
+	customCursor();
 	openHeader();
 	openSideBar();
 	fixedsidebarBtn();
@@ -95,7 +96,11 @@ const accordionFunction = () => {
     });
   });
 };
-AOS.init();
+AOS.init({
+
+
+	duration: 1000,
+});
 
 const playVideo = () => {
 	const startVideoBtns = document.querySelectorAll('.start-video');
@@ -332,25 +337,53 @@ const tabsShows = () =>{
 	})
 		
 	}
-	const cursor = document.querySelector('.custom-cursor');
-
-	document.addEventListener('mousemove', (e) => {
-		cursor.style.top = `${e.clientY}px`;
-		cursor.style.left = `${e.clientX}px`;
-	});
 	
-	
-	const linkElements = 'a, button, video, .swiper-pagination-bullet,.basket, .basket svg, .burger__wrap div, .burger, .logo img';
-	
-	document.addEventListener('mouseover', (e) => {
-	
-		if (e.target.matches(linkElements)) {
-			cursor.classList.add('cursor_cursor--link');
-		} else {
-			cursor.classList.remove('cursor_cursor--link');
+	const customCursor = () => {
+		const cursor = document.querySelector('.custom-cursor');
+		function enableCustomCursor() {
+			cursor.style.display = 'block'; 
+			document.addEventListener('mousemove', moveCursor);
+			document.addEventListener('mouseover', handleMouseOver);
 		}
-	});
 	
+		function disableCustomCursor() {
+			cursor.style.display = 'none'; 
+			document.body.style.cursor = 'auto';
+			document.removeEventListener('mousemove', moveCursor);
+			document.removeEventListener('mouseover', handleMouseOver);
+		}
+	
+		function moveCursor(e) {
+			cursor.style.top = `${e.clientY}px`;
+			cursor.style.left = `${e.clientX}px`;
+		}
+	
+		function handleMouseOver(e) {
+			const linkElements = 'a, button, video, .swiper-pagination-bullet, .basket, .basket svg, .burger__wrap div, .burger, .logo img';
+			if (e.target.closest(linkElements)) {
+				cursor.classList.add('cursor_cursor--link');
+			} else {
+				cursor.classList.remove('cursor_cursor--link');
+			}
+		}
+	
+		function checkDevice() {
+			if ('ontouchstart' in window || window.innerWidth <= 768) {
+				disableCustomCursor();
+			} else {
+				enableCustomCursor();
+			}
+		}
+	
+		checkDevice();
+	
+		window.addEventListener('resize', checkDevice);
+	};
+	
+	customCursor();
+	
+	
+
 	
 	
 

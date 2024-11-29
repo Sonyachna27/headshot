@@ -35,8 +35,12 @@
 				border: 1px solid rgba(156, 157, 159, 0.40);
 				background: $--dark;
 				position: relative;
+				transition: .3s linear;
 				@media screen and (min-width:767.5px) {
 					padding: 11px;
+				}
+				&:hover{
+					background-color: $--silver-3;
 				}
 				& span{
 					background-color: $--orange;
@@ -61,6 +65,17 @@
 			background-color: #313131;
 			flex-grow: 1;
 			height: auto;
+			transition: .3s linear;
+			&:hover{
+				background-color: $--orange;
+				
+				& .burger{
+					background-color: #FFC977;
+				}
+				& div{
+					color: #000;
+				}
+			}
 			& .burger{
 				padding: 8px;
 				height: 100%;
@@ -71,10 +86,12 @@
 				gap: 4px;
 				width: 30px;
 				flex-direction: column;
+				transition: .3s linear;
 				@media screen and (min-width:767.5px) {
 					width: 36px;
 				}
 				& span{
+					transition: .3s linear;
 					width: 20px;
 					height: 2.5px;
 					background-color: $--dark;
@@ -162,8 +179,21 @@
 					& a{
 						position: relative;
 						transition: .3s linear;
+						&::before{
+							content: '';
+							width: 0;
+							height: 2px;
+							background-color: $--orange;
+							position: absolute;
+							bottom: -24px;
+							left: 0;
+							transition: .3s linear;
+						}
 						&:hover{
 							color: $--orange;
+							&:before{
+								width: 100%;
+							}
 						}
 					}
 					&:not(:nth-last-of-type(1)){
@@ -181,13 +211,7 @@
 						& a{
 							
 							&::before{
-								content: '';
 								width: 100%;
-								height: 2px;
-								background-color: $--orange;
-								position: absolute;
-								bottom: -24px;
-								left: 0;
 							}
 							
 						}

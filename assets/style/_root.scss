@@ -24,9 +24,6 @@
 	src: url(../fonts/e-Ukraine-Bold.otf);
 	font-weight: 700;
 }
-// *{
-// 	border: 1px solid red;
-// }
 
 $--gradient: linear-gradient(180deg, #313131 0%, #4E4E4E 100%), #313131;
 $--orange:#FE9A02;
@@ -45,11 +42,9 @@ html.open{
 }
 html, body{
 	background-color: $--black-bg;
-	// pointer-events: all;
 }
 
 body{
-	
 	color: $--silver;
 	font-family: 'e-Ukraine', sans-serif;
 }
@@ -88,7 +83,7 @@ max-width: 1560px;
 	transition: .3s linear;
 	@include p4;
 	text-transform: uppercase;
-	transition: 1s linear;
+	transition: .3s linear;
 	background: linear-gradient(180deg, #45B04A 0%, #72C774 100%), #313131;
 	position: relative;
 	z-index: 1;
@@ -391,19 +386,21 @@ max-width: 1560px;
 		}
 	}
 	*{
-		cursor: none;
+		
 		border: 0 solid #e2e8f0;
 		-webkit-text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
+		@media screen and (min-width:768px) {
+			cursor: none;
+		}
 	}
-
 	.custom-cursor {
 		position: fixed;
     opacity: 1;
     pointer-events: none;
 		mix-blend-mode: difference;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     transition: -webkit-transform .35s ease;
     -moz-transition: transform .35s ease,-moz-transform .35s ease;
     transition: transform .35s ease;
@@ -417,8 +414,6 @@ max-width: 1560px;
     background-repeat: no-repeat;
     background-size: cover;
 	}
-
-
 
 .cursor_cursor--link {
     -webkit-transform: translate(-50%,-50%) scale(.6) rotate(45deg);

@@ -52,7 +52,6 @@
 		&__contacts{
 			display: flex;
 			flex-direction: column;
-		
 		}
 		&__contacts{
 			gap: 14px;
@@ -70,12 +69,23 @@
 				@media screen and (max-width:767px) {
 					font-size: 14px;
 				}
+				&:hover{
+					& span{
+						transition: .3s linear;
+						&:nth-of-type(1){
+							background-color: #FFC977;
+						}
+						&:nth-of-type(2){
+							background-color:$--orange;
+							color: $--dark;
+						}
+					}
+				}
 				& span{
 					display: flex;
 						align-items: center;
 						justify-content: center;
 					&:nth-of-type(1){
-						
 						max-width: 44px;
 						height: auto;
 						min-width: 44px;
@@ -103,6 +113,22 @@
 				font-weight: 400;
 				line-height: 160%; /* 28.8px */
 				letter-spacing: 0.18px;
+				& svg {
+					path, rect{
+						transition: .3s linear;
+					}
+				}
+				&:hover{
+					color: $--orange;
+					& svg {
+						rect{
+							fill: $--orange;
+						}
+						path {
+							stroke: $--orange;
+						}
+					}
+				}
 			}
 		}
 	}
