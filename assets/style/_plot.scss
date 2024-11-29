@@ -11,10 +11,11 @@
 			display: flex;
 		gap: 20px;
 		flex-wrap: wrap;
-		}
 		@media screen and (max-width:1023.9px) {
-		flex-direction: column;
+			flex-direction: column;
+			}
 		}
+		
 	}
 &__item{
 	height: auto;
@@ -112,7 +113,6 @@
 	top: 47%;
 	transform: translateY(-50%);
 	z-index: 1;
-	cursor: pointer;
 	@media screen and (max-width:767px) {
 		display: none;
 	}
@@ -145,6 +145,7 @@
 		.without-slider &{
 			display: none;
 		}
+	
 		position: relative;
 		top: initial;
 		left: initial;
@@ -158,6 +159,7 @@
 			border-radius: 0;
 			opacity: 1;
 			background-color: $--silver-3;
+			cursor:none;
 			&.swiper-pagination-bullet-active{
 				background-color: $--orange;
 			}

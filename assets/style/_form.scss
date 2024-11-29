@@ -45,7 +45,6 @@ form{
 			gap: 5px;
 	}
 	.rating > label {
-			cursor: pointer;
 			background: url(../images/star-silver.svg) center / contain no-repeat;
 	}
 	.rating > label:before {
@@ -72,13 +71,11 @@ form{
 		position: relative;
 		background: #02410f;
 		z-index: 1;
-		cursor: pointer;
 		& .btn{
 			max-width: 100%;
 			width: 100%;
 			text-align: center;
 			background: transparent;
-			cursor: pointer;
 		}
 		&:hover{
 			&:after{
@@ -133,43 +130,6 @@ form{
 	}
 }
 
-
-// &__box {
-//   width: 14px;
-//   height: 14px;
-// 	padding: 3px;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-//   background-color: $--silver-3;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   transition: background-color 0.3s, border-color 0.3s;
-// 	cursor: pointer;
-// }
-
-
-// &__box::before {
-//   content: "";
-//   width: 4px;
-//   height: 4px;
-//   background: $--orange; 
-//   opacity: 0;
-//   transition: opacity 0.3s;
-// }
-
-
-
-
-
 	}
 }
 
-// .form__check input:checked + .form__check__box:before {
-//   opacity: 1;
-// }
-
-// .form__check input:checked + .form__check__box::before {
-//   opacity: 1; 
-// }

@@ -71,7 +71,6 @@
 				gap: 4px;
 				width: 30px;
 				flex-direction: column;
-				cursor: pointer;
 				@media screen and (min-width:767.5px) {
 					width: 36px;
 				}
@@ -96,7 +95,6 @@
 				text-transform: uppercase;
 				@include p4;
 				color: $--silver;
-				cursor: pointer;
 				@media screen and (min-width:767.5px) {
 					padding: 10px;
 				}

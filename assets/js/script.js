@@ -107,6 +107,7 @@ const playVideo = () => {
 
 					if (video) {
 						const videoPosterAtribute = video.getAttribute('poster');
+						const videoControlsAtribute = video.getAttribute('controls');
 							if (video.paused) {
 									video.play();
 									video.style.height = "100%";
@@ -331,4 +332,25 @@ const tabsShows = () =>{
 	})
 		
 	}
+	const cursor = document.querySelector('.custom-cursor');
+
+	document.addEventListener('mousemove', (e) => {
+		cursor.style.top = `${e.clientY}px`;
+		cursor.style.left = `${e.clientX}px`;
+	});
+	
+	
+	const linkElements = 'a, button, video, .swiper-pagination-bullet,.basket, .basket svg, .burger__wrap div, .burger, .logo img';
+	
+	document.addEventListener('mouseover', (e) => {
+	
+		if (e.target.matches(linkElements)) {
+			cursor.classList.add('cursor_cursor--link');
+		} else {
+			cursor.classList.remove('cursor_cursor--link');
+		}
+	});
+	
+	
+	
 

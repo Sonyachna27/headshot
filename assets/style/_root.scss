@@ -43,11 +43,15 @@ $--red: #C93232;
 html.open{
 	overflow: hidden;
 }
-body{
+html, body{
 	background-color: $--black-bg;
+	// pointer-events: all;
+}
+
+body{
+	
 	color: $--silver;
 	font-family: 'e-Ukraine', sans-serif;
-	// background-image: url(../images/linemap-20.png);
 }
 main{
 	@media screen and (max-width:1023px) {
@@ -85,7 +89,7 @@ max-width: 1560px;
 	@include p4;
 	text-transform: uppercase;
 	transition: 1s linear;
-	background: $--green;
+	background: linear-gradient(180deg, #45B04A 0%, #72C774 100%), #313131;
 	position: relative;
 	z-index: 1;
 	&:hover{
@@ -288,7 +292,6 @@ max-width: 1560px;
 	}
 	& span{
 		display: flex;
-		// width: 42px;
 		padding:5px 10px;
 		min-width: 42px;
 		min-height: 46px;
@@ -356,7 +359,6 @@ max-width: 1560px;
 			bottom: -1px;
 			right: -1px;
 			background-color: #101010;
-			// background-image: url('../images/history-item-svg.svg');
 			z-index: -1;
 			background: linear-gradient(#101010, #101010) 50% 50%/calc(100% - 4px) calc(100% - 4px) no-repeat,
 				conic-gradient(from 145deg, transparent 94%, #fe9a02 95%),
@@ -388,3 +390,41 @@ max-width: 1560px;
 			background-color: $--red;
 		}
 	}
+	*{
+		cursor: none;
+		border: 0 solid #e2e8f0;
+		-webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+	}
+
+	.custom-cursor {
+		position: fixed;
+    opacity: 1;
+    pointer-events: none;
+		mix-blend-mode: difference;
+    width: 70px;
+    height: 70px;
+    transition: -webkit-transform .35s ease;
+    -moz-transition: transform .35s ease,-moz-transform .35s ease;
+    transition: transform .35s ease;
+    transition: transform .35s ease,-webkit-transform .35s ease,-moz-transform .35s ease;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background-image: none;
+    background-image: url(../images/crosshair.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+
+
+.cursor_cursor--link {
+    -webkit-transform: translate(-50%,-50%) scale(.6) rotate(45deg);
+    -moz-transform: translate(-50%,-50%) scale(.6) rotate(45deg);
+    transform: translate(-50%,-50%) scale(.6) rotate(45deg);
+		
+}
+
+

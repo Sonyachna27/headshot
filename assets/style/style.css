@@ -63,12 +63,10 @@ a {
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
-  cursor: pointer;
   color: inherit;
 }
 
 button {
-  cursor: pointer;
   border: 1px solid transparent;
 }
 
@@ -101,8 +99,11 @@ html.open {
   overflow: hidden;
 }
 
-body {
+html, body {
   background-color: #101010;
+}
+
+body {
   color: #9C9D9F;
   font-family: "e-Ukraine", sans-serif;
 }
@@ -153,7 +154,7 @@ body {
   line-height: normal;
   text-transform: uppercase;
   transition: 1s linear;
-  background: #4DAD54;
+  background: linear-gradient(180deg, #45B04A 0%, #72C774 100%), #313131;
   position: relative;
   z-index: 1;
 }
@@ -510,6 +511,33 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   background-color: #C93232;
 }
 
+* {
+  cursor: none;
+  border: 0 solid #e2e8f0;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 1;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 70px;
+  height: 70px;
+  transition: transform 0.35s ease;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background-image: none;
+  background-image: url(../images/crosshair.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cursor_cursor--link {
+  transform: translate(-50%, -50%) scale(0.6) rotate(45deg);
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -574,7 +602,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   display: block;
   min-width: 32px;
   min-height: 32px;
-  cursor: pointer;
   background: none;
   border: none;
   outline: none;
@@ -696,7 +723,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   gap: 4px;
   width: 30px;
   flex-direction: column;
-  cursor: pointer;
 }
 @media screen and (min-width: 767.5px) {
   .header__top .burger__wrap .burger {
@@ -726,7 +752,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   font-weight: 700;
   line-height: normal;
   color: #9C9D9F;
-  cursor: pointer;
 }
 @media screen and (min-width: 767.5px) {
   .header__top .burger__wrap div {
@@ -949,6 +974,7 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   line-height: 150%; /* 48px */
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  color: #141414;
 }
 @media screen and (max-width: 767px) {
   .howto__title h2 {
@@ -1069,7 +1095,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
 .accord-item {
   max-width: 100%;
   width: 100%;
-  cursor: pointer;
   transition: all 0.3s linear;
 }
 .accord-item-top {
@@ -1428,6 +1453,8 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
+  position: relative;
 }
 .different__frame button {
   padding: 0;
@@ -1441,6 +1468,7 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
+  z-index: 2;
 }
 .different__frame button.play {
   opacity: 0;
@@ -1582,7 +1610,7 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1023.9px) {
-  .plot__items {
+  .without-slider .plot__items {
     flex-direction: column;
   }
 }
@@ -1688,7 +1716,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   top: 47%;
   transform: translateY(-50%);
   z-index: 1;
-  cursor: pointer;
 }
 .without-slider .plot-btn {
   display: none;
@@ -1741,6 +1768,7 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   border-radius: 0;
   opacity: 1;
   background-color: #313131;
+  cursor: none;
 }
 .plot-pagination.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #FE9A02;
@@ -1774,7 +1802,6 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
 .photo__image {
   border-bottom: 5px solid #9C9D9F;
   transition: 0.3s linear;
-  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -2658,7 +2685,6 @@ form .rating {
   gap: 5px;
 }
 form .rating > label {
-  cursor: pointer;
   background: url(../images/star-silver.svg) center/contain no-repeat;
 }
 form .rating > label:before {
@@ -2685,14 +2711,12 @@ form .submit__wrap {
   position: relative;
   background: #02410f;
   z-index: 1;
-  cursor: pointer;
 }
 form .submit__wrap .btn {
   max-width: 100%;
   width: 100%;
   text-align: center;
   background: transparent;
-  cursor: pointer;
 }
 form .submit__wrap:hover:after {
   opacity: 0;
@@ -3446,7 +3470,6 @@ form .form__check input[type=checkbox]:checked:after {
   width: 100%;
   height: auto;
   position: relative;
-  cursor: pointer;
   border-bottom: 5px solid #9C9D9F;
   transition: 0.3s linear;
   aspect-ratio: 1;
@@ -3768,7 +3791,6 @@ form .form__check input[type=checkbox]:checked:after {
   width: 100%;
   display: flex;
   overflow: hidden;
-  cursor: pointer;
   transition: all 0.3s ease;
   border-left: 1px solid #313131;
 }
@@ -4112,7 +4134,6 @@ form .form__check input[type=checkbox]:checked:after {
   top: 47%;
   transform: translateY(-50%);
   z-index: 1;
-  cursor: pointer;
   z-index: 51;
 }
 .goods__slider .goods-btn.active {
@@ -4190,7 +4211,6 @@ form .form__check input[type=checkbox]:checked:after {
   padding: 10px 20px;
   background-color: #9C9D9F;
   color: #646566;
-  cursor: pointer;
 }
 .goods__size__item.active {
   background-color: #FFF;
@@ -4258,7 +4278,6 @@ form .form__check input[type=checkbox]:checked:after {
 }
 
 .goods__container-tabs-btn {
-  cursor: pointer;
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
