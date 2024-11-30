@@ -1475,7 +1475,7 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
 }
 @media screen and (max-width: 767px) {
   .different__frame {
-    padding: 20px;
+    padding: 18px;
   }
 }
 .different__frame:after {
@@ -4465,8 +4465,7 @@ form .form__check input[type=checkbox]:checked:after {
   position: absolute;
   top: 47%;
   transform: translateY(-50%);
-  z-index: 1;
-  z-index: 51;
+  z-index: 2;
 }
 .goods__slider .goods-btn.active {
   border: 1px solid #101010;
