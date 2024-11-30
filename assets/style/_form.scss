@@ -2,19 +2,30 @@ form{
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	.popup__form &{
+		gap: 0;
+	}
 	& input,
-	& textarea{
+	& textarea,
+	& select{
 		border: none;
 		outline: none;
 		background: none;
+		.popup__form &{
+			margin-bottom: 20px;
+		}
 	}
 	& textarea{
 		resize: none;
 		min-height: 150px;
 		height: 100%;
 	}
+	& select{
+		width: 100%;
+	}
 	& input:not([type="submit"], [type="checkbox"]),
-	& textarea{
+	& textarea,
+	& select{
 		padding: 25px;
 		background-color: $--silver-3;
 		border-bottom: 2px solid $--silver;
@@ -70,13 +81,19 @@ form{
 	& .submit__wrap{
 		position: relative;
 		background: linear-gradient(180deg, #45B04A 0%, #72C774 100%), #313131;
-
+		& input{
+			margin-bottom: 0;
+		}
+		.popup__form &{
+			margin-top: 40px;
+		}
 		z-index: 1;
 		& .btn{
 			max-width: 100%;
 			width: 100%;
 			text-align: center;
 			background: transparent;
+			
 		}
 		&:hover{
 			&:after{
@@ -95,6 +112,19 @@ form{
 			transition: .3s linear;
 		}
 	}
+	&__select{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.form__touch{
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 160%;
+		color: $--silver;
+		margin-bottom: 10px;
+	
+	}
 	& .form__check{
 		display: flex;
 		align-items: center;
@@ -105,32 +135,37 @@ form{
 		font-weight: 400;
 		line-height: normal;
 		
-& input[type="checkbox"]{
-	appearance: none;
-	width: 14px;
-	height: 14px;
-	padding: 3px;
-	border: none;
-	background-color: $--silver-3;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	&:after{
-		content: '';
-		width: 7px;
-		height: 7px;
-		background-color: $--orange;
-		display: block;
-		opacity: 0;
-		transition: .3s linear;
-	}
-	&:checked{
-		&:after{
-			opacity: 1;
+		& input[type="checkbox"]{
+			appearance: none;
+			width: 14px;
+			height: 14px;
+			padding: 3px;
+			border: none;
+			background-color: $--silver-3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:after{
+				content: '';
+				width: 7px;
+				height: 7px;
+				background-color: $--orange;
+				display: block;
+				opacity: 0;
+				transition: .3s linear;
+			}
+			&:checked{
+				&:after{
+					opacity: 1;
+				}
+			}
 		}
-	}
-}
-
+		.popup__form &{
+		margin-bottom: 10px;
+			& input{
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 

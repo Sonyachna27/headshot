@@ -1,18 +1,16 @@
 .faq{
 	margin-bottom: 100px;
 
-	&__title{
-		& h2{
-			@include titleH2;
-		}
-	}
 	&__accord{
 		gap: 10px;
 	}
 		&__item{
-			padding: 40px 60px;
+			padding: 40px;
 			border-left: 6px solid var(--Silver, #9C9D9F);
 			background: $--silver-3;
+			@media screen and (min-width:1440px) {
+				padding: 40px 60px;
+			}
 			@media screen and (max-width:767px) {
 				padding: 20px;
 			}

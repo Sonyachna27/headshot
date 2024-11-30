@@ -37,7 +37,8 @@ $--dark-2: #1A1A1A;
 $--dark-1: #161616;
 $--green: #4DAD54;
 $--red: #C93232;
-html.open{
+html.open,
+html.open-popup{
 	overflow: hidden;
 }
 html, body{
@@ -70,6 +71,10 @@ max-width: 1560px;
 	@media screen and (min-width:1240px) {
 		width: calc(100% - 80px);
 	}
+}
+button.btn{
+	border: none;
+	outline: none;
 }
 .btn{
 	display: flex;
@@ -153,8 +158,9 @@ max-width: 1560px;
 			background: url(../images/title-arrow.svg) center center / cover no-repeat;
 		}
 		&:hover{
+			color: $--orange;
 			&:after{
-				transform: translateX(10px);
+				background-image: url(../images/arrow-plot-orange.svg);
 			}
 		}
 	}
@@ -262,7 +268,7 @@ max-width: 1560px;
 		text-decoration: underline;
 		transition: .3s linear;
 		&:hover{
-			color: $--orange;
+			color: $--white;
 		}
 	}
 }
@@ -305,6 +311,10 @@ max-width: 1560px;
 		min-height: 32px;
 		}
 		&.active{
+			background-color: $--orange;
+			color: $--white;
+		}
+		&:hover{
 			background-color: $--orange;
 			color: $--white;
 		}
@@ -362,13 +372,20 @@ max-width: 1560px;
 				conic-gradient(from 235deg, transparent 94%, #fe9a02 95%);
 			background-blend-mode: darken;
 			padding: 16.5px;
+			z-index: 0;
 		}
 		& span{
 			padding: 3.5px 12.5px;
 			text-align: center;
 			background-color: $--orange;
+			position: relative;
+			z-index: 1;
 			@include p1;
 			aspect-ratio: 1;
+		}
+		& svg{
+			position: relative;
+			z-index: 1;
 		}
 	}
 	.scroll {
@@ -422,4 +439,7 @@ max-width: 1560px;
 		
 }
 
-
+.lightboxOverlay {
+	background-color: #000;
+	opacity: 0;
+}

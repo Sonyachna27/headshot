@@ -51,9 +51,20 @@
 			& a{
 				width: 65px;
 				height: 65px;
+				&:hover{
+					& svg rect{
+						fill: $--orange;
+					}
+					path {
+						stroke: $--orange;
+					}
+				}
 				& svg{
 					width: 100%;
 					height: 100%;
+					path, rect{
+						transition: .3s linear;
+					}
 				}
 			}
 		}

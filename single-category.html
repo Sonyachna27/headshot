@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/style/aos.css">
 <link rel="stylesheet" href="./assets/style/swiper.css">
+<link rel="stylesheet" href="./assets/style/lightbox.css">
 	<link rel="stylesheet" href="./assets/style/style.css">
 	<title>Document</title>
 </head>
@@ -13,7 +14,7 @@
 		<div class="container">
 			<div class="header__container">
 				<div class="header__top">
-					<a href="#" class="btn">зарегистрироваться</a>
+					<button data-button="popup-book" class="btn">зарегистрироваться</button>
 					<a href="./index.html" class="logo">
 						<img src="./assets/images/logo.svg" alt="Headshot">
 					</a>
@@ -42,12 +43,11 @@
 						<li><a href="./page-services.html">Сценарии</a></li>
 						<li><a href="./page-rules.html">Правила игры</a></li>
 						<li><a href="./page-reviews.html">Отзывы</a></li>
-						<li><a href="#">Цены</a></li>
+						<li><a href="./page-price.html">Цены</a></li>
 						<li><a href="#">товар</a></li>
 						<li><a href="./page-news.html">Новости</a></li>
 						<li><a href="./page-gallery.html">Фотогаллерея</a></li>
 						<li><a href="./page-contact.html">Контакты</a></li>
-						<li><a href="./page.html">Политика конфидициальности</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -63,10 +63,9 @@
 						<li><a href="./page-services.html">Сценарии</a></li>
 						<li><a href="./page-rules.html">Правила игры</a></li>
 						<li><a href="./page-reviews.html">Отзывы</a></li>
-						<li><a href="#">Цены</a></li>
-						<li><a href="#">товар</a></li>
+						<li><a href="./page-price.html">Цены</a></li>
+						<li><a href="./page-category.html">товар</a></li>
 						<li><a href="./page-contact.html">Контакты</a></li>
-						
 					</ul>
 				</nav>
 			</div>
@@ -620,7 +619,7 @@
 					<div class="add__content" data-aos="fade-right">
 						<div>Как попасть в HeadShot</div>
 						<p>Если вы новичок, то достаточно вступить в команду, которая уже является членом Клуба. Для этого зарегистрируйтесь на портале, выберете команду, свяжитесь с командиром и предложите свою кандидатуру.</p>
-						<a href="#" class="btn">зарегестрироваться на игру</a>
+						<button data-button="popup-book" class="btn">зарегестрироваться на игру</button>
 					</div>
 						<img data-aos="fade-left" class="add__img" src="./assets/images/add-img2.png" alt="Как попасть в HeadShot">
 				</div>
@@ -802,9 +801,61 @@
 				</svg>
 		</button>
 	</div> -->
+
+	<div class="popup">
+		<div class="popup-bg"></div>
+		<div class="container">
+			<div class="popup-wrap">
+				<button class="close popup-close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+						<path d="M2.00012 2L16.0001 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+						<path d="M16.0002 2L2.00022 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+						</svg>
+				</button>
+				
+				<div class="popup__form">
+					<div>[ зарегестрироваться на игру ]</div>
+					<p>Заполните форму заявки, и мы с вами свяжемся в течении 1 часа</p>
+					<form action="#" type="post">
+						<input type="text" name="name" placeholder="Ваше имя">
+						<input type="tel" name="phone" placeholder="Номер телефона">
+						<div class="form__select">
+							<select name="popup-select">
+								<option value="1">Сценарий</option>
+								<option value="2">Сценарий</option>
+								<option value="3">Сценарий</option>
+							</select>
+						</div>
+						<div class="form__touch">Как можно связаться?</div>
+							<div class="form__check"> 
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Telegram</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">WhatsApp</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Viber</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Позвоните мне</label>
+						</div> 
+					<div class="submit__wrap" >
+						<input type="submit" value="отправить" class="btn">
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="custom-cursor"></div>
 	<script src="./assets/js/aos.js"></script>
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/lightbox.js"></script>
 	<script src="./assets/js/swiper.js"></script>
 	<script src="assets/js/script.js"></script>
-</body>
-</html>
+	</body>
+	</html>

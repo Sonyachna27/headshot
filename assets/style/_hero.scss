@@ -10,8 +10,6 @@
 	color: $--dark;
 	padding-top: 50px;
 	align-items: flex-end;
-	align-items: flex-end;
-	justify-content: center;
 	@media screen and (min-width:767.5px) {
 		padding-top: 130px;
 	}
@@ -26,18 +24,18 @@
 	flex-direction: column;
 	width: 100%;
 	margin: auto 0;
-	margin-left: 10px;
 	padding-bottom: 40px;
-	max-width: 100%;
+	
 	flex-grow: 1;
 	@media screen and (min-width:1460px) {
 		padding-top: 198px;
 		padding-bottom: 190px;
-		margin-left: 23px;
 	}
 	@media screen and (min-width:1024px) {
+		margin-left: 10px;
 		width: 50%;
 		padding-bottom: 165px;
+		max-width: 615px;
 	}
 	& h1{
 		@include titleh1;

@@ -16,8 +16,47 @@
 		line-height: 140%; /* 19.6px */
 		text-transform: uppercase;
 		
+		display: flex;
+		padding: 20px 30px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		color: $--silver;
+		position: relative;
+		transition: .3s linear;
+		z-index: 1;
+		background:$--gradient;
+		border: none;
+		border-top: 3px solid $--dark-2;
+
+		&:hover{
+			color: $--white;
+			border-top-color: #646566;
+			svg path{
+				fill: $--white;
+			}
+			&:after{
+				opacity: 0;
+			}
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: $--dark-2;
+			z-index: -1;
+			transition: .3s linear;
+		}
 		&.active{
 			color: $--white;
+			border-top-color: #646566;
+			
+			&:after{
+				opacity: 0;
+			}
 				&	span{
 						color: $--orange;
 					}

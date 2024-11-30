@@ -65,13 +65,12 @@
 			align-items: center;
 			text-align: center;
 			border-left: 1px solid $--dark;
-			padding: 40px;
+			padding: 40px 80px;
 			@media  screen and (max-width:767px) {
 				padding:40px 20px;
 			}
 			& h3{
 				@include titleH4;
-
 			}
 			& p{
 				color:$--silver-3;
@@ -81,6 +80,7 @@
 				color: $--orange;
 				font: inherit;
 				text-decoration: underline;
+				font-weight: 700;
 			}
 		}
 	}

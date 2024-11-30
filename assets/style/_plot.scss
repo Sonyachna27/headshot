@@ -115,8 +115,9 @@
 				background: url(../images/arrow-plot.svg) center center / cover no-repeat;
 			}
 			&:hover{
+				color: $--orange;
 				&:after{
-					transform: translateX(10px);
+					background-image: url(../images/arrow-plot-orange.svg);
 				}
 			}
 		}
@@ -136,6 +137,7 @@
 	position: absolute;
 	top: 47%;
 	transform: translateY(-50%);
+	transition: .3s linear;
 	z-index: 1;
 	@media screen and (max-width:767px) {
 		display: none;
@@ -143,8 +145,24 @@
 	&.active{
 		border: 1px solid $--black-bg;
 	}
+	& svg rect{
+		transition: .3s linear;
+	}
+	&:hover{
+		svg rect{
+			fill: $--orange;
+		}
+	}
 	&.swiper-button-disabled{
 		cursor: not-allowed;
+		&:hover{
+			rect{
+				fill: #313131;
+			}
+			path{
+				fill:#646566;
+			}
+		}
 		rect{
 			fill: #313131;
 		}

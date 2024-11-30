@@ -29,13 +29,12 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
-		flex-grow: 1;
 		@media screen and (min-width:1440px) {
-			width: 39.5%;
+			width: 47%;
 		}
 		
 		@media screen and (min-width:1023.5px) and (max-width:1439.9px) {
-			width: 25%;
+			width: 50%;
 		}
 		
 		& h2{
@@ -61,12 +60,12 @@
 	}
 	&__frame{
 		width: 100%;
-		padding: 45px;
+		padding: 43px;
 		position: relative;
 		aspect-ratio: 1;
 		height: fit-content;
 		@media screen  and (min-width:1023.5px){
-			width: 19%;
+			width: 37%;
 			min-width: 490px;
 		}
 		@media screen  and (max-width:767px){

@@ -1,4 +1,5 @@
 .history{
+
 	&__title{
 		h2{
 			@include titleH2;
@@ -9,16 +10,41 @@
 		display: flex;
 		flex-direction: column;
 		gap: 80px;
+		position: relative;
+		@media screen and (min-width:1023.9px) {
+			&:after{
+				content: '';
+				width: 1px;
+				background-color: $--silver;
+				height: 100%;
+				left: 50%;
+				top: 0;
+				transform: translate(-50%, 0%);
+				position: absolute;
+			}
+		}
 		@media screen and (max-width:767px) {
-			gap: 50px;
+			gap: 70px;
 		}
 	}
 	&__item{
 		display: flex;
-		gap: 80px;
+		gap: 80px;position: relative;
 		@media screen and (max-width:1023.9px) {
 			gap: 50px;
 			flex-direction: column;
+			&:not(:nth-last-of-type(1)){
+				&:after{
+					content: '';
+					width: 1px;
+					background-color: $--silver;
+					height: 50px;
+					left: 50%;
+					bottom: -60px;
+					transform: translate(-50%, 0%);
+					position: absolute;
+				}
+			}
 		}
 		&:nth-child(even){
 			flex-direction: row-reverse;

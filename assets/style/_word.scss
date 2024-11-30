@@ -1,5 +1,5 @@
 .word{
-	padding:140px 0 0 50px;
+	padding:140px 0 0 0;
 	@media screen and (max-width:1440px) {
 		padding-left:0 ;
 	}
@@ -15,6 +15,14 @@
 	&__items{
 		display: flex;
 		gap: 20px;
+		@media screen and (min-width:1440px) {
+			padding-left: 50px;
+			padding-bottom: 124px;
+		}
+		@media screen and (min-width:1023px) {
+			padding-bottom: 40px;
+			border-bottom: 1px solid #646566;
+		}
 		@media screen and (max-width:1023px) {
 			flex-direction: column;
 		}
@@ -76,14 +84,22 @@
 				@include p5;
 				margin-bottom: 15px;
 			}
-			& h2{
+			& a > h2{
 				@include titleH2;
 				margin-bottom: 20px;
 				text-transform: uppercase;
+				transition: .3s linear;
+				&:hover{
+					color: $--orange;
+				}
 			}
-			& h3{
+			& a > h3{
 				@include titleH5;
 				margin-bottom: 5px;
+				transition: .3s linear;
+				&:hover{
+					color: $--orange;
+				}
 				.news &{
 					@include titleH2;
 				}
@@ -99,12 +115,13 @@
 				text-overflow: ellipsis;
 			}
 			& p{
-				@include p4;
+				@include p4-2;
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				margin-bottom: 40px;
 				.news &{
 					font-size: 16px;
 					font-style: normal;
@@ -122,13 +139,21 @@
 				gap: 5px;
 				align-items: center;
 				justify-content: center;
+				transition: .3s linear;
 				@media screen and (max-width:767px) {
 					margin-top: 40px;
+				}
+				&:hover{
+					color: $--orange;
+					&:after{
+						background-image: url(../images/arrow-plot-orange.svg);
+					}
 				}
 				&:after{
 					content: '';
 					width: 11px;
 					height: 9px;
+					transition: .3s linear;
 					background: url(../images/title-arrow.svg) center center / cover no-repeat;
 				}
 			}

@@ -93,7 +93,13 @@ margin-bottom: 140px;
 		color: $--white;
 		margin-bottom: 40px;
 	}
-
+& img{
+	max-width: 300px;
+	max-height: 300px;
+	width: 100%;
+	height:100%;
+object-fit: cover;
+}
 }
 &__size{
 	border-bottom: 1px solid $--silver-3;
@@ -178,17 +184,38 @@ margin-bottom: 40px;
     height: 100px;
     padding: 20px 30px;
     transition: .2s ease-in-out;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-	border-top: 3px solid $--silver2;
-background: $--dark-2;
-@media screen and (max-width:980px) {
-	min-width: fit-content;
-}
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		border-top: 3px solid $--silver2;
+		z-index: 1;
+	background: $--dark-2;
+	@media screen and (max-width:980px) {
+		min-width: fit-content;
+	}
+	position: relative;
+	transition: .3s linear;
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: 0;
+		background-color: $--green;
+		position: absolute;
+		transition: .3s linear;
+	}
 	&:hover{
-		
+		color: $--white;
+		&:after{
+			opacity: 1;
+
+		}
 	}
 	font-size: 14px;
 	font-style: normal;
@@ -221,6 +248,7 @@ background: $--dark-2;
 	& h2{
 		@include titleH2;
 		margin-bottom: 20px;
+		color: $--white;
 	}
 	& p{
 		color: $--silver;

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/style/aos.css">
 <link rel="stylesheet" href="./assets/style/swiper.css">
+<link rel="stylesheet" href="./assets/style/lightbox.css">
 	<link rel="stylesheet" href="./assets/style/style.css">
 	<title>Document</title>
 </head>
@@ -13,7 +14,7 @@
 		<div class="container">
 			<div class="header__container">
 				<div class="header__top">
-					<a href="#" class="btn">зарегистрироваться</a>
+					<button data-button="popup-book" class="btn">зарегистрироваться</button>
 					<a href="./index.html" class="logo">
 						<img src="./assets/images/logo.svg" alt="Headshot">
 					</a>
@@ -47,8 +48,6 @@
 						<li><a href="./page-news.html">Новости</a></li>
 						<li><a href="./page-gallery.html">Фотогаллерея</a></li>
 						<li><a href="./page-contact.html">Контакты</a></li>
-						
-
 					</ul>
 				</nav>
 			</div>
@@ -76,12 +75,12 @@
 		<section class="hero" >
 			<div class="container">
 				<div class="hero__container">
-					<div class="hero__content" data-aos="fade-right">
+					<div class="hero__content" >
 						<h1>[ headshot ] СТРАЙКБОЛЬНЫЙ КЛУБ В КИЕВЕ</h1>
 						<p>Страйкбол – командно-тактическая игра с условиями, максимально приближенными к боевым: члены команд быстро перемещаются по пересеченной местности, ведут огонь из имитаций боевого оружия с целью поразить стрелка соперничающей команды</p>
-						<a href="#" class="btn">зарегистрироваться</a>
+						<button data-button="popup-book" class="btn">зарегистрироваться</button>
 					</div>
-					<div class="hero__img" data-aos="fade-left">
+					<div class="hero__img" >
 						<img src="./assets/images/hero-img1.png" alt="headshot СТРАЙКБОЛЬНЫЙ КЛУБ В КИЕВЕ">
 					</div>
 				</div>
@@ -110,7 +109,7 @@
 					<div class="different__content" >
 						<h2>Мы не гонимся за количеством - вам понравится это отличие!</h2>
 						<p>Страйкбол основан на взаимоуважении, честности и доверии. Здесь команда - это основа любой игры. От ее игровых и культурных ценностей зависит успех любого мероприятия. Будь то обычная дневная пострелушка с простым сценарием или сложный многочасовой проект. Поэтому для нас, в первую очередь, важно качество команд, а не кол-во. Важно желание команды показывать честную красивую игру в предлагаемых условиях. Для объединения таких команд и создан этот Клуб.</p>
-						<a href="#" class="btn">ПОДРОБНЕЕ О НАС</a>
+						<a href="./page-about.html" class="btn">ПОДРОБНЕЕ О НАС</a>
 					</div>
 					<div class="different__frame" >
 						<video poster="./assets/images/different-img1.jpg" class="different-video" controls="none" data-video="first-video">
@@ -132,7 +131,7 @@
 					<div class="add__content" data-aos="fade-right">
 						<div>Как попасть в HeadShot</div>
 						<p>Если вы новичок, то достаточно вступить в команду, которая уже является членом Клуба. Для этого зарегистрируйтесь на портале, выберете команду, свяжитесь с командиром и предложите свою кандидатуру.</p>
-						<a href="#" class="btn">зарегестрироваться на игру</a>
+						<button data-button="popup-book" class="btn">зарегестрироваться на игру</button>
 					</div>
 						<img data-aos="fade-left" class="add__img" src="./assets/images/add-img1.png" alt="Как попасть в HeadShot">
 				</div>
@@ -143,7 +142,7 @@
 				<div class="plot__container">
 					<div class="plot__title justify-title" >
 						<h2>[ наши сценарии ]</h2>
-						<a href="#">смотреть все сервисы</a>
+						<a href="./page-services.html">смотреть все сервисы</a>
 					</div>
 					<div class="plot__slider">
 						<div class="swiper plotSlider">
@@ -304,7 +303,7 @@
 					<div class="promo__content">
 						<span>Бронируйте <span> игру заранее!</span></span>
 						<p>У нас большой спрос на игры в выходные дни, поэтому мы настоятельно рекомендуем оставлять бронь заблаговременно.</p>
-						<a href="#" class="btn">зарегестрироваться на игру</a>
+						<button data-button="popup-book" class="btn">зарегестрироваться на игру</button>
 					</div>
 					<div class="promo__img">
 						<img src="./assets/images/promo-img.jpg" alt="Бронируйте игру заранее!">
@@ -320,21 +319,21 @@
 						<a href="#">смотреть больше фото</a>
 					</div>
 					<div class="photo__images">
-						<div class="photo__image">
+						<a href="./assets/images/photo-img1.jpg" class="photo__image" data-lightbox="photo">
 							<img src="./assets/images/photo-img1.jpg" alt="photo">
-						</div>
-						<div class="photo__image">
+						</a>
+						<a href="./assets/images/photo-img2.jpg" class="photo__image" data-lightbox="photo">
 							<img src="./assets/images/photo-img2.jpg" alt="photo">
-						</div>
-						<div class="photo__image">
+						</a>
+						<a href="./assets/images/photo-img3.jpg" class="photo__image" data-lightbox="photo">
 							<img src="./assets/images/photo-img3.jpg" alt="photo">
-						</div>
-						<div class="photo__image">
+						</a>
+						<a href="./assets/images/photo-img4.jpg" class="photo__image" data-lightbox="photo">
 							<img src="./assets/images/photo-img4.jpg" alt="photo">
-						</div>
-						<div class="photo__image">
+						</a>
+						<a href="./assets/images/photo-img5.jpg" class="photo__image" data-lightbox="photo">
 							<img src="./assets/images/photo-img5.jpg" alt="photo">
-						</div>
+						</a>
 						
 					</div>
 				</div>
@@ -350,6 +349,64 @@
 					<div class="reviews__slider">
 						<div class="swiper reviewsSlider">
 							<div class="swiper-wrapper reviews__wrap">
+								<div class="swiper-slide reviews-slide reviews-item">
+									<div class="reviews-top">
+										<img src="./assets/images/reviews-img1.svg" alt="Андрей Гаврилов">
+										<div class="reviews-info">
+											<span class="reviews-top-info-name">Андрей Гаврилов</span>
+											<div class="reviews-top-info-rating">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+													<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+													</svg>
+													<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+														<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+														</svg>
+														<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+															<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+															</svg>
+															<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+																<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+																</svg>
+																<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+																	<path d="M9.52447 3.58156C9.67415 3.1209 10.3259 3.1209 10.4755 3.58156L11.5451 6.87336C11.7459 7.49139 12.3218 7.90983 12.9717 7.90983H16.4329C16.9172 7.90983 17.1186 8.52964 16.7268 8.81434L13.9266 10.8488C13.4009 11.2307 13.1809 11.9078 13.3817 12.5258L14.4513 15.8176C14.6009 16.2783 14.0737 16.6613 13.6818 16.3766L10.8817 14.3422C10.3559 13.9602 9.64405 13.9602 9.11832 14.3422L6.31815 16.3766C5.9263 16.6613 5.39906 16.2783 5.54873 15.8176L6.6183 12.5258C6.81911 11.9078 6.59913 11.2307 6.07339 10.8488L3.27323 8.81434C2.88137 8.52964 3.08276 7.90983 3.56712 7.90983H7.02832C7.67816 7.90983 8.25409 7.49139 8.4549 6.87336L9.52447 3.58156Z" fill="#9C9D9F" stroke="#9C9D9F"/>
+																	</svg>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-bottom">
+										<p>Шесть лет в страйкболе и пока ничего лучше Privatk'и и его комьюнити не знаю!Игры на которых возможно выполнить задание без единого выстрела. Где охранять тактическую лужу интересно. А суточные игры не выглядят, как большой фестиваль! КрутоКрутоКруто</p>
+									<span class="reviews-bottom-date">17 октября 2024</span>
+									</div>
+								</div>
+								<div class="swiper-slide reviews-slide reviews-item">
+									<div class="reviews-top">
+										<img src="./assets/images/reviews-img1.svg" alt="Андрей Гаврилов">
+										<div class="reviews-info">
+											<span class="reviews-top-info-name">Андрей Гаврилов</span>
+											<div class="reviews-top-info-rating">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+													<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+													</svg>
+													<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+														<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+														</svg>
+														<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+															<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+															</svg>
+															<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+																<path d="M9.04894 3.42705C9.3483 2.50574 10.6517 2.50574 10.9511 3.42705L12.0206 6.71885C12.1545 7.13087 12.5385 7.40983 12.9717 7.40983H16.4329C17.4016 7.40983 17.8044 8.64945 17.0207 9.21885L14.2205 11.2533C13.87 11.5079 13.7234 11.9593 13.8572 12.3713L14.9268 15.6631C15.2261 16.5844 14.1717 17.3506 13.388 16.7812L10.5878 14.7467C10.2373 14.4921 9.7627 14.4921 9.41221 14.7467L6.61204 16.7812C5.82833 17.3506 4.77385 16.5844 5.0732 15.6631L6.14277 12.3713C6.27665 11.9593 6.12999 11.5079 5.7795 11.2533L2.97933 9.21885C2.19562 8.64945 2.59839 7.40983 3.56712 7.40983H7.02832C7.46154 7.40983 7.8455 7.13087 7.97937 6.71885L9.04894 3.42705Z" fill="#FE9A02"/>
+																</svg>
+																<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+																	<path d="M9.52447 3.58156C9.67415 3.1209 10.3259 3.1209 10.4755 3.58156L11.5451 6.87336C11.7459 7.49139 12.3218 7.90983 12.9717 7.90983H16.4329C16.9172 7.90983 17.1186 8.52964 16.7268 8.81434L13.9266 10.8488C13.4009 11.2307 13.1809 11.9078 13.3817 12.5258L14.4513 15.8176C14.6009 16.2783 14.0737 16.6613 13.6818 16.3766L10.8817 14.3422C10.3559 13.9602 9.64405 13.9602 9.11832 14.3422L6.31815 16.3766C5.9263 16.6613 5.39906 16.2783 5.54873 15.8176L6.6183 12.5258C6.81911 11.9078 6.59913 11.2307 6.07339 10.8488L3.27323 8.81434C2.88137 8.52964 3.08276 7.90983 3.56712 7.90983H7.02832C7.67816 7.90983 8.25409 7.49139 8.4549 6.87336L9.52447 3.58156Z" fill="#9C9D9F" stroke="#9C9D9F"/>
+																	</svg>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-bottom">
+										<p>Шесть лет в страйкболе и пока ничего лучше Privatk'и и его комьюнити не знаю!Игры на которых возможно выполнить задание без единого выстрела. Где охранять тактическую лужу интересно. А суточные игры не выглядят, как большой фестиваль! КрутоКрутоКруто</p>
+									<span class="reviews-bottom-date">17 октября 2024</span>
+									</div>
+								</div>
 								<div class="swiper-slide reviews-slide reviews-item">
 									<div class="reviews-top">
 										<img src="./assets/images/reviews-img1.svg" alt="Андрей Гаврилов">
@@ -513,7 +570,7 @@
 					<div class="add__content" data-aos="fade-right">
 						<div>Как попасть в HeadShot</div>
 						<p>Если вы новичок, то достаточно вступить в команду, которая уже является членом Клуба. Для этого зарегистрируйтесь на портале, выберете команду, свяжитесь с командиром и предложите свою кандидатуру.</p>
-						<a href="#" class="btn">зарегестрироваться на игру</a>
+						<button data-button="popup-book" class="btn">зарегестрироваться на игру</button>
 					</div>
 						<img data-aos="fade-left" class="add__img" src="./assets/images/add-img2.png" alt="Как попасть в HeadShot">
 				</div>
@@ -697,8 +754,59 @@
 				</svg>
 		</button>
 	</div>
+	<div class="popup">
+		<div class="popup-bg"></div>
+		<div class="container">
+			<div class="popup-wrap">
+				<button class="close popup-close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+						<path d="M2.00012 2L16.0001 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+						<path d="M16.0002 2L2.00022 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+						</svg>
+				</button>
+				
+				<div class="popup__form">
+					<div>[ зарегестрироваться на игру ]</div>
+					<p>Заполните форму заявки, и мы с вами свяжемся в течении 1 часа</p>
+					<form action="#" type="post">
+						<input type="text" name="name" placeholder="Ваше имя">
+						<input type="tel" name="phone" placeholder="Номер телефона">
+						<div class="form__select">
+							<select name="popup-select">
+								<option value="1">Сценарий</option>
+								<option value="2">Сценарий</option>
+								<option value="3">Сценарий</option>
+							</select>
+						</div>
+						<div class="form__touch">Как можно связаться?</div>
+						  <div class="form__check"> 
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Telegram</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">WhatsApp</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Viber</label>
+						</div>
+						<div class="form__check">
+							<input type="checkbox" name="checkbox">
+							<label for="checkbox">Позвоните мне</label>
+						</div> 
+					<div class="submit__wrap" >
+						<input type="submit" value="отправить" class="btn">
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="custom-cursor"></div>
 	<script src="./assets/js/aos.js"></script>
+	<script src="./assets/js/jquery.js"></script>
+	<script src="./assets/js/lightbox.js"></script>
 	<script src="./assets/js/swiper.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>

@@ -112,12 +112,7 @@
 			}
 			& p{
 				color: $--white;
-				// &:not(:nth-last-of-type(1)){
-				// 	margin-bottom: 40px;
-				// }
-				// &:nth-last-of-type(1){
-				// 	margin-bottom: 0;
-				// }
+			@include p2-1;
 			}
 		}
 	}

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	wrapTablesInDiv();
 	goodsSliderInit();
 	tabsShows();
+	showPopUpBook();
 });
 const HTMLELEMENT = document.querySelector('html');
 const openHeader = () =>{
@@ -338,24 +339,31 @@ const tabsShows = () =>{
 		
 	}
 	
+
+	
 	const customCursor = () => {
 		const cursor = document.querySelector('.custom-cursor');
+		let rafId;
+	
 		function enableCustomCursor() {
-			cursor.style.display = 'block'; 
+			cursor.style.display = 'block';
 			document.addEventListener('mousemove', moveCursor);
 			document.addEventListener('mouseover', handleMouseOver);
 		}
 	
 		function disableCustomCursor() {
-			cursor.style.display = 'none'; 
+			cursor.style.display = 'none';
 			document.body.style.cursor = 'auto';
 			document.removeEventListener('mousemove', moveCursor);
 			document.removeEventListener('mouseover', handleMouseOver);
 		}
 	
 		function moveCursor(e) {
-			cursor.style.top = `${e.clientY}px`;
-			cursor.style.left = `${e.clientX}px`;
+			cancelAnimationFrame(rafId);
+			rafId = requestAnimationFrame(() => {
+				cursor.style.top = `${e.clientY}px`;
+				cursor.style.left = `${e.clientX}px`;
+			});
 		}
 	
 		function handleMouseOver(e) {
@@ -376,12 +384,40 @@ const tabsShows = () =>{
 		}
 	
 		checkDevice();
-	
 		window.addEventListener('resize', checkDevice);
 	};
 	
-	customCursor();
 	
+	const showPopUpBook = () => {
+		const popUpBook = document.querySelector(".popup");
+		const popupBg = document.querySelectorAll(".popup-bg");
+		const htmlElement = document.querySelector("html");
+		const closePopUpBook = document.querySelectorAll(".popup-close");
+		const popupButtons = document.querySelectorAll('[data-button="popup-book"]');
+	
+		if (!popUpBook) return;
+	
+		const openPopup = () => {
+			htmlElement.classList.add("open-popup");
+			popUpBook.classList.add("open");
+		};
+	
+		const closePopup = () => {
+			htmlElement.classList.remove("open-popup");
+			popUpBook.classList.remove("open");
+		};
+	
+		popupButtons.forEach((button) => button.addEventListener("click", openPopup));
+		closePopUpBook.forEach((closeButton) => closeButton.addEventListener("click", closePopup));
+		popupBg.forEach((bg) => bg.addEventListener("click", closePopup));
+	};
+	
+	// lightbox.option({
+	// 	'resizeDuration': 200,
+	// 	'wrapAround': true
+	// })
+	
+	lightbox.init();
 	
 
 	
