@@ -929,7 +929,12 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   background-image: url(../images/hero-bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+@media screen and (max-width: 1200px) {
+  .hero-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 .hero__container {
   display: flex;

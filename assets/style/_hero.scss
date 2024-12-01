@@ -14,7 +14,12 @@
 		background-image: url(../images/hero-bg.svg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
+	
+		@media screen and (max-width:1200px) {
+			background-repeat: no-repeat;
+    background-position: center;
+		
+		}
 	}
 	&__container{
 	display: flex;
