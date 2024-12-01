@@ -96,7 +96,7 @@ button.btn{
 		color: $--white;
 		border-color: $--white;
 		svg path{
-			fill: $--white;
+			stroke: $--white;
 		}
 		&:after{
 			opacity: 0;
@@ -398,6 +398,10 @@ button.btn{
 		background-color: $--green;
 		color: $--white;
 		margin-bottom: 5px;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
 		&.sold-out{
 			background-color: $--red;
 		}

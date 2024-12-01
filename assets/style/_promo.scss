@@ -21,10 +21,14 @@
 		}
 		@media screen and (max-width:1023.9px) {
 			border-bottom: 10px solid $--orange;
+			padding: 80px 15px;
 		}
 		& span{
 			@include titleH2;
 			margin-bottom: 20px;
+			@media screen and (max-width:767px) {
+				margin-bottom: 10px;
+			}
 			& span{
 				color: $--orange;
 				font: inherit;
@@ -32,7 +36,10 @@
 		}
 		& p{
 			@include p2;
-			margin-bottom: 10px;
+			margin-bottom: 60px;
+			@media screen and (max-width:767px) {
+				margin-bottom: 30px;
+			}
 		}
 		& .btn{
 			margin-top: auto;

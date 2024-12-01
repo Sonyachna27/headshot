@@ -149,6 +149,9 @@
 					line-height: 140%; 
 					text-transform: uppercase;
 					color: $--silver;
+					@media screen and (max-width:767px) {
+						font-size: 18px;
+					}
 					&.current_page_item{
 						background-color: $--orange;
 						color: $--dark;

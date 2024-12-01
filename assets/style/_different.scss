@@ -60,13 +60,13 @@
 	}
 	&__frame{
 		width: 100%;
+		max-width: 490px;
 		padding: 43px;
 		position: relative;
 		aspect-ratio: 1;
-		height: fit-content;
-		@media screen  and (min-width:1023.5px){
-			width: 37%;
-			min-width: 490px;
+		max-height: 490px;
+		@media screen  and (max-width:1023.5px){
+			margin: 0 auto;
 		}
 		@media screen  and (max-width:767px){
 		padding: 18px;

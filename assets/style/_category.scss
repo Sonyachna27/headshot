@@ -29,6 +29,9 @@
 			position: relative;
 			transition: .3s linear;
 			background: linear-gradient(180deg, #282828 0%, #616161 100%), #161616;
+			@media screen and (min-width:1440px) {
+				padding: 50px;
+			}
 			& img{
 				max-width: 100%;
 				max-height: 100%;
@@ -56,9 +59,7 @@
 				z-index: 0;
 			}
 		}
-	@media screen and (min-width:1440px) {
-					padding: 50px;
-				}
+	
 		&__link{
 			@include titleH5;
 			text-transform: uppercase;

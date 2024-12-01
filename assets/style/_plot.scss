@@ -1,4 +1,15 @@
 .plot{
+	background-color: #161616;
+	padding-top: 140px;
+	padding-bottom: 100px;
+	@media screen and (max-width:70px){
+		padding-top: 70px;
+	}
+	.without-slider &{
+		padding-top: 50px;
+		padding-bottom: 70px;
+		background-color: transparent;
+	}
 	&__title{
 		h2{
 			@include titleH2;
@@ -7,7 +18,6 @@
 	&__items{
 		
 		.without-slider &{
-			padding-top: 50px;
 			display: flex;
 		gap: 20px;
 		flex-wrap: wrap;

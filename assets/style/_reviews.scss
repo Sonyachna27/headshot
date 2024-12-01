@@ -56,8 +56,9 @@
 				font-style: normal;
 				font-weight: 700;
 				line-height: 150%;
+				color: $--white;
 				@media screen and (max-width:767px) {
-					font-size: 22px;
+					font-size: 18px;
 				}
 			}
 			&-rating{
