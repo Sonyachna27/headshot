@@ -5,9 +5,9 @@
 	@media screen and (max-width:70px){
 		padding-top: 70px;
 	}
-	.without-slider &{
+	&.without-slider {
 		padding-top: 50px;
-		padding-bottom: 70px;
+		padding-bottom: 100px;
 		background-color: transparent;
 	}
 	&__title{

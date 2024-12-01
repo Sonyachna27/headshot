@@ -1659,9 +1659,9 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
     padding-top: 70px;
   }
 }
-.without-slider .plot {
+.plot.without-slider {
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   background-color: transparent;
 }
 .plot__title h2 {
