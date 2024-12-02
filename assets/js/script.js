@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	wrapTablesInDiv();
 	goodsSliderInit();
 	tabsShows();
-	showPopUpBook();
+	handlePopup();
 });
 const HTMLELEMENT = document.querySelector('html');
 const openHeader = () =>{
@@ -390,31 +390,35 @@ const tabsShows = () =>{
 	};
 	
 	
-	const showPopUpBook = () => {
-		const popUpBook = document.querySelector(".popup");
-		const popupBg = document.querySelectorAll(".popup-bg");
-		const htmlElement = document.querySelector("html");
-		const closePopUpBook = document.querySelectorAll(".popup-close");
-		const popupButtons = document.querySelectorAll('[data-button="popup-book"]');
-	
-		if (!popUpBook) return;
-	
-		const openPopup = () => {
-			htmlElement.classList.add("open-popup");
-			popUpBook.classList.add("open");
-		};
-	
-		const closePopup = () => {
-			htmlElement.classList.remove("open-popup");
-			popUpBook.classList.remove("open");
-		};
-	
-		popupButtons.forEach((button) => button.addEventListener("click", openPopup));
-		closePopUpBook.forEach((closeButton) => closeButton.addEventListener("click", closePopup));
-		popupBg.forEach((bg) => bg.addEventListener("click", closePopup));
-	};
+	const handlePopup = () => {
+    const openPopup = () => {
+        document.querySelectorAll('[data-open="open"]').forEach(element => {
+            element.addEventListener('click', () => {
+                document.documentElement.classList.add('open-popup');
+            });
+        });
+    };
+
+    const closePopup = () => {
+        document.querySelectorAll('[data-close="close"]').forEach(element => {
+            element.addEventListener('click', () => {
+                document.documentElement.classList.remove('open-popup');
+            });
+        });
+    };
+
+    openPopup();
+    closePopup();
+};
+
+
+	lightbox.init({
+showImageNumberLabel: true,
+disableScrolling: false,
+fitImagesInViewport:true,
+	}
 		
-	lightbox.init();
+	);
 	
 
 	
