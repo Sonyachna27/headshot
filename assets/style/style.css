@@ -827,6 +827,9 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
 .open .header__menu {
   left: 0;
 }
+.header__menu nav {
+  margin-bottom: 30px;
+}
 .header__menu nav ul {
   display: flex;
   flex-direction: column;
@@ -849,6 +852,18 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
 .header__menu nav ul li.current_page_item {
   background-color: #FE9A02;
   color: #141414;
+}
+@media screen and (min-width: 1024px) {
+  .header__menu .btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__menu .btn {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
 }
 .header__bottom {
   border-bottom: 3px solid #646566;
@@ -2298,20 +2313,20 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   flex-direction: column;
   gap: 50px;
 }
-.footer__nav li:not(.sub-menu li) a {
+.footer__nav li:not(.sub-menu li) .sub-menu a {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.footer__nav li:not(.sub-menu li) a:after {
+.footer__nav li:not(.sub-menu li) .sub-menu a:after {
   width: 0%;
   height: 2px;
   background-color: #FE9A02;
   content: "";
   transition: 0.3s linear;
 }
-.footer__nav li:not(.sub-menu li) a:hover:after {
+.footer__nav li:not(.sub-menu li) .sub-menu a:hover:after {
   width: 100%;
 }
 @media screen and (max-width: 1240px) {
@@ -2529,6 +2544,12 @@ body[data-aos-easing=new-easing] [data-aos], [data-aos][data-aos][data-aos-easin
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+@media screen and (max-width: 767px) {
+  .reviews-top img {
+    max-width: 60px;
+    max-height: 60px;
+  }
 }
 .reviews-top-info {
   flex-direction: column;
@@ -4440,9 +4461,10 @@ form .form__check input[type=checkbox]:checked:after {
   justify-content: start;
   margin-bottom: 30px;
 }
-.staff__item__info__reviews span {
+.staff__item__info__reviews a {
   margin-left: 5px;
   text-transform: uppercase;
+  font-size: 14px;
 }
 .staff__item__info__bottom {
   display: flex;

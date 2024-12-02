@@ -130,6 +130,7 @@
 		z-index: 50;
 		transition: .3s linear;
 		overflow-y: auto;
+		
 		@media screen and (max-width:767px) {
 			padding: 30px 20px;
 		}
@@ -137,6 +138,7 @@
 			left: 0;
 		}
 		& nav{
+			margin-bottom: 30px;
 			& ul{
 				display: flex;
 				flex-direction: column;
@@ -157,6 +159,16 @@
 						color: $--dark;
 					}
 				}
+			}
+		}
+		& .btn{
+			@media screen and (min-width:1024px) {
+				display: none;
+			}
+			@media screen and (max-width:767px) {
+				max-width: 100%;
+				width: 100%;
+				text-align: center;
 			}
 		}
 	}

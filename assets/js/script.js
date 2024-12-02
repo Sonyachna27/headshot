@@ -365,15 +365,17 @@ const tabsShows = () =>{
 				cursor.style.left = `${e.clientX}px`;
 			});
 		}
-	
 		function handleMouseOver(e) {
 			const linkElements = 'a, button, video, .swiper-pagination-bullet, .basket, .basket svg, .burger__wrap div, .burger, .logo img';
-			if (e.target.closest(linkElements)) {
+			const excludedElements = '.footer__nav ul a:not(.sub-menu a) ';
+		
+			if (e.target.closest(linkElements) && !e.target.closest(excludedElements)) {
 				cursor.classList.add('cursor_cursor--link');
 			} else {
 				cursor.classList.remove('cursor_cursor--link');
 			}
 		}
+		
 	
 		function checkDevice() {
 			if ('ontouchstart' in window || window.innerWidth <= 768) {
@@ -411,12 +413,7 @@ const tabsShows = () =>{
 		closePopUpBook.forEach((closeButton) => closeButton.addEventListener("click", closePopup));
 		popupBg.forEach((bg) => bg.addEventListener("click", closePopup));
 	};
-	
-	// lightbox.option({
-	// 	'resizeDuration': 200,
-	// 	'wrapAround': true
-	// })
-	
+		
 	lightbox.init();
 	
 
