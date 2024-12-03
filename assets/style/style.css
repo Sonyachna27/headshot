@@ -4901,6 +4901,12 @@ form .form__check input[type=checkbox]:checked:after {
   text-align: center;
   position: relative;
 }
+.popup-wrapper::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
 
 .popup-wrap {
   vertical-align: middle;
