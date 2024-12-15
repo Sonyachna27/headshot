@@ -98,8 +98,6 @@ const accordionFunction = () => {
   });
 };
 AOS.init({
-
-
 	duration: 1000,
 });
 

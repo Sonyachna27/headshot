@@ -116,7 +116,8 @@ form{
 		width: 100%;
 		margin-bottom: 20px;
 	}
-	.form__touch{
+	.form__touch,
+	fieldset legend{
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
@@ -125,7 +126,8 @@ form{
 		margin-bottom: 10px;
 	
 	}
-	& .form__check{
+	& .form__check,
+	fieldset label{
 		display: flex;
 		align-items: center;
 		justify-content: start;
@@ -134,8 +136,10 @@ form{
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
+		width: fit-content;
 		
-		& input[type="checkbox"]{
+		& input[type="checkbox"],
+		& input[type="radio"]{
 			appearance: none;
 			width: 14px;
 			height: 14px;

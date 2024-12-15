@@ -273,52 +273,59 @@
 		</button>
 	</div>
 	<div class="popup">
-		<div class="popup-bg"></div>
-		<div class="container">
-			<div class="popup-wrap">
-				<button class="close popup-close">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-						<path d="M2.00012 2L16.0001 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
-						<path d="M16.0002 2L2.00022 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
-						</svg>
-				</button>
-				
-				<div class="popup__form">
-					<div>[ зарегестрироваться на игру ]</div>
-					<p>Заполните форму заявки, и мы с вами свяжемся в течении 1 часа</p>
-					<form action="#" type="post">
-						<input type="text" name="name" placeholder="Ваше имя">
-						<input type="tel" name="phone" placeholder="Номер телефона">
-						<div class="form__select">
-							<select name="popup-select">
-								<option value="1">Сценарий</option>
-								<option value="2">Сценарий</option>
-								<option value="3">Сценарий</option>
-							</select>
+		<div class="popup-bg" data-close="close"></div>
+			<div class="popup-wrapper">
+				<div class="popup-wrap">
+					<button class="close popup-close" data-close="close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+							<path d="M2.00012 2L16.0001 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+							<path d="M16.0002 2L2.00022 16.0001" stroke="#000" stroke-width="2.70769" stroke-linecap="round"/>
+							</svg>
+					</button>
+					<div class="popup__form">
+						<div>[ зарегестрироваться на игру ]</div>
+						<p>Заполните форму заявки, и мы с вами свяжемся в течении 1 часа</p>
+						<form action="#" type="post">
+							<input type="text" name="name" placeholder="Ваше имя">
+							<input type="tel" name="phone" placeholder="Номер телефона">
+							<div class="form__select">
+								<select name="popup-select">
+									<option value="1">Сценарий</option>
+									<option value="2">Сценарий</option>
+									<option value="3">Сценарий</option>
+								</select>
+							</div>
+							<fieldset>
+								<legend >Как можно связаться?</legend>
+								
+								<label>
+										<input type="radio" name="contact" value="telegram">
+										Telegram
+								</label>
+						
+								<label>
+										<input type="radio" name="contact" value="whatsapp">
+										WhatsApp
+								</label>
+						
+								<label >
+										<input type="radio" name="contact" value="viber">
+										Viber
+								</label>
+						
+								<label >
+										<input type="radio" name="contact" value="call">
+										Позвоните мне
+								</label>
+						</fieldset>
+						
+						<div class="submit__wrap" >
+							<input type="submit" value="отправить" class="btn">
 						</div>
-						<div class="form__touch">Как можно связаться?</div>
-						  <div class="form__check"> 
-							<input type="checkbox" name="checkbox">
-							<label for="checkbox">Telegram</label>
-						</div>
-						<div class="form__check">
-							<input type="checkbox" name="checkbox">
-							<label for="checkbox">WhatsApp</label>
-						</div>
-						<div class="form__check">
-							<input type="checkbox" name="checkbox">
-							<label for="checkbox">Viber</label>
-						</div>
-						<div class="form__check">
-							<input type="checkbox" name="checkbox">
-							<label for="checkbox">Позвоните мне</label>
-						</div> 
-					<div class="submit__wrap" >
-						<input type="submit" value="отправить" class="btn">
+					</form>
 					</div>
-				</form>
 				</div>
-			</div>
+			
 		</div>
 	</div>
 	<div class="custom-cursor"></div>

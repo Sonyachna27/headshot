@@ -355,23 +355,30 @@
 									<option value="3">Сценарий</option>
 								</select>
 							</div>
-							<div class="form__touch">Как можно связаться?</div>
-								<div class="form__check"> 
-								<input type="checkbox" name="checkbox">
-								<label for="checkbox">Telegram</label>
-							</div>
-							<div class="form__check">
-								<input type="checkbox" name="checkbox">
-								<label for="checkbox">WhatsApp</label>
-							</div>
-							<div class="form__check">
-								<input type="checkbox" name="checkbox">
-								<label for="checkbox">Viber</label>
-							</div>
-							<div class="form__check">
-								<input type="checkbox" name="checkbox">
-								<label for="checkbox">Позвоните мне</label>
-							</div> 
+							<fieldset>
+								<legend >Как можно связаться?</legend>
+								
+								<label>
+										<input type="radio" name="contact" value="telegram">
+										Telegram
+								</label>
+						
+								<label>
+										<input type="radio" name="contact" value="whatsapp">
+										WhatsApp
+								</label>
+						
+								<label >
+										<input type="radio" name="contact" value="viber">
+										Viber
+								</label>
+						
+								<label >
+										<input type="radio" name="contact" value="call">
+										Позвоните мне
+								</label>
+						</fieldset>
+						
 						<div class="submit__wrap" >
 							<input type="submit" value="отправить" class="btn">
 						</div>
